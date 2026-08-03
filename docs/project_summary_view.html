@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Customer Intelligence Agent 项目简略总结</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      color: #172033;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 920px;
+      margin: 36px auto;
+      padding: 36px 42px;
+      background: #fff;
+      border: 1px solid #e6eaf2;
+      border-radius: 16px;
+      box-shadow: 0 18px 45px rgba(24, 35, 66, .08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: #0b2545;
+      font-size: 30px;
+      line-height: 1.25;
+    }
+    .meta {
+      margin-bottom: 26px;
+      color: #687386;
+      font-size: 14px;
+    }
+    h2 {
+      margin: 28px 0 10px;
+      color: #285f9f;
+      font-size: 20px;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+    li {
+      margin: 6px 0;
+    }
+    table {
+      width: 100%;
+      margin-top: 12px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 11px 12px;
+      border: 1px solid #dfe5ef;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5fb;
+      color: #22324d;
+      font-weight: 700;
+    }
+    .note {
+      margin-top: 26px;
+      padding: 14px 16px;
+      background: #f8fbff;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      color: #34415a;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AI Customer Intelligence Agent 项目简略总结</h1>
+    <div class="meta">版本：本地测试版｜日期：2026-07-31</div>
+
+    <p>本项目是一个面向用户消费/行为数据的本地智能分析平台，核心目标是帮助业务使用者从上传数据中快速获得数据质量判断、人群结构、用户洞察和可执行营销策略。</p>
+
+    <h2>一、项目定位</h2>
+    <ul>
+      <li>使用者上传 Excel/CSV 后，系统自动完成数据体检、人群识别和可视化展示。</li>
+      <li>点击智能分析后，系统调用已配置的大模型生成用户洞察和策略分析。</li>
+      <li>历史结果保存到本地数据库，可在历史页面查看和删除。</li>
+    </ul>
+
+    <h2>二、整体流程</h2>
+    <ul>
+      <li>上传数据：接收用户行为或消费明细文件。</li>
+      <li>数据体检：检查缺失、重复、异常和可分析程度。</li>
+      <li>人群识别：按品类、行为、金额、频次等聚合信号识别人群。</li>
+      <li>模型洞察：生成具体人群画像、兴趣标签和预测兴趣。</li>
+      <li>策略分析：生成简要策略、页面要素关键词和攒钱相关短文案。</li>
+      <li>历史沉淀：保存每次洞察和策略记录，支持删除。</li>
+    </ul>
+
+    <h2>三、板块输入与输出</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>板块</th>
+          <th>输入</th>
+          <th>是否用大模型</th>
+          <th>输出</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>数据上传</td>
+          <td>Excel/CSV 文件</td>
+          <td>否</td>
+          <td>数据集记录、字段识别、行数</td>
+        </tr>
+        <tr>
+          <td>数据体检</td>
+          <td>上传后的原始数据</td>
+          <td>否</td>
+          <td>质量评分、缺失/重复/异常提示</td>
+        </tr>
+        <tr>
+          <td>人群识别</td>
+          <td>清洗后的聚合行为数据</td>
+          <td>否</td>
+          <td>人群名称、人数、占比、识别置信度</td>
+        </tr>
+        <tr>
+          <td>用户洞察</td>
+          <td>人群结果 + 业务问题</td>
+          <td>是</td>
+          <td>画像、具体标签、预测兴趣</td>
+        </tr>
+        <tr>
+          <td>策略分析</td>
+          <td>洞察结果 + 业务问题</td>
+          <td>是</td>
+          <td>简要策略、页面关键词、短文案、验证指标</td>
+        </tr>
+        <tr>
+          <td>历史结果</td>
+          <td>已生成分析记录</td>
+          <td>否</td>
+          <td>历史洞察/策略查看与删除</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>四、Agent 分工</h2>
+    <ul>
+      <li>Orchestrator Agent：判断分析路线并编排流程。</li>
+      <li>Data Agent：读取、清洗、体检和本地分群，不调用模型。</li>
+      <li>Insight Agent：调用千问模型生成用户画像、兴趣标签和兴趣预测。</li>
+      <li>Strategy Agent：调用千问模型生成简要策略、页面关键词和攒钱相关短文案。</li>
+    </ul>
+
+    <h2>五、当前关键规则</h2>
+    <ul>
+      <li>人群占比表示该人群在样本用户中的比例。</li>
+      <li>识别置信度表示系统对该人群划分结果的可信程度。</li>
+      <li>模型输入只发送聚合证据，不发送原始交易明细。</li>
+      <li>模型输出已限制长度，降低等待时间和超时概率。</li>
+    </ul>
+
+    <div class="note">总结：当前版本已经具备本地上传、本地数据分析、大模型洞察、大模型策略生成、历史保存和历史删除能力，适合用于测试和演示用户智能分析流程。</div>
+  </main>
+</body>
+</html>
