@@ -1,0 +1,15 @@
+# 由 pyproject.toml 派生，供 Render 等原生 Python 部署环境明确安装依赖。
+fastapi>=0.116,<1
+uvicorn[standard]>=0.35,<1
+pydantic>=2.10,<3
+python-multipart>=0.0.20,<1
+pandas>=2.2,<4
+openpyxl>=3.1,<4
+xlrd>=2.0,<3
+scikit-learn>=1.6,<2
+langgraph>=0.6,<2
+sqlalchemy>=2.0,<3
+psycopg2-binary>=2.9,<3
+psycopg[binary]>=3.2,<4
+httpx>=0.28,<1
+jieba>=0.42,<1

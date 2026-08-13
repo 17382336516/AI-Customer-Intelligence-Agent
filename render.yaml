@@ -1,0 +1,46 @@
+# Render 一键部署配置：后端（Web Service）+ 前端（Static Site）
+# 使用前请在 Render 控制台创建 PostgreSQL 实例，并把其 External URL 填入 backend 的环境变量 DATABASE_URL。
+# 本文件用 infra-as-code 描述两个服务；也可在控制台手动创建（见 README 部署章节）。
+
+services:
+  # ---------------- 后端 ----------------
+  - type: web
+    name: customer-intelligence-backend
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        # 在 Render 控制台把这里的 value 换成你的 Postgres 实例 External Database URL
+        sync: false
+      - key: CORS_ORIGINS
+        # 部署后替换为前端实际域名，例如 https://customer-intelligence-frontend.onrender.com
+        sync: false
+      - key: UPLOAD_DIR
+        value: /data/uploads
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        value: https://api.openai.com/v1
+      - key: LLM_MODEL
+        sync: false
+
+  # ---------------- 前端 ----------------
+  - type: web
+    name: customer-intelligence-frontend
+    runtime: static
+    region: oregon
+    plan: free
+    rootDir: frontend
+    buildCommand: sh ./render-build.sh
+    staticPublishPath: ./dist
+    # 把后端域名填到 VITE_API_BASE_URL；部署后前端即直连后端
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false

@@ -29,6 +29,42 @@ docker compose up --build
 
 Docker 方案使用 PostgreSQL / pgvector 镜像、FastAPI 后端和 Nginx 托管的 Vue 前端。
 
+## 云端部署（Render）
+
+整个项目拆成两个 Render 服务：后端 Web Service（FastAPI + Postgres）和前端 Static Site（Vue 构建产物，直连后端域名）。仓库已包含 `render.yaml` 与 `frontend/render-build.sh`，可 infra-as-code 一键创建，也可在控制台手动创建。
+
+### 步骤一：准备 PostgreSQL
+
+在 Render 控制台创建 **PostgreSQL** 实例，复制其 **External Database URL**（形如 `postgresql://user:pass@host:5432/db`）。
+
+### 步骤二：部署后端
+
+- 新建 **Web Service**，连接本仓库，`Root Directory` = `backend`
+- Runtime: `Python 3`，Build Command: `pip install -r requirements.txt`
+- Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+- Health Check Path: `/health`
+- 环境变量：
+  - `DATABASE_URL` = 步骤一复制的 Postgres URL（代码会自动改写为 `postgresql+psycopg2://...`）
+  - `CORS_ORIGINS` = 前端上线后的域名，例如 `https://customer-intelligence-frontend.onrender.com`（多个用逗号分隔）
+  - `UPLOAD_DIR` = `/data/uploads`
+  - 可选：`LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL`（配置后增强洞察与策略表达）
+- 部署完成后记下后端域名，例如 `https://customer-intelligence-backend.onrender.com`
+
+### 步骤三：部署前端
+
+- 新建 **Static Site**，连接本仓库，`Root Directory` = `frontend`
+- Build Command: `sh ./render-build.sh`
+- Publish Directory: `dist`
+- 环境变量：`VITE_API_BASE_URL` = `https://customer-intelligence-backend.onrender.com`（即后端域名，前端会直连它）
+- 部署完成后把前端域名回填到后端 `CORS_ORIGINS` 并重新部署后端，避免被跨域拦截
+
+### 步骤四：验证
+
+打开前端域名 → 点击「载入完整示例」→ 开始分析。若后端报跨域错误，检查 `CORS_ORIGINS` 是否包含前端域名。
+
+> 注意：免费版 Render 服务在闲置后会休眠，首次访问需要冷启动（约数十秒）。
+
+
 ## 本地开发
 
 ### 后端
