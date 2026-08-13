@@ -1,0 +1,82 @@
+[
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 71.53,
+    "reason": "D1 Consumption Preference Accuracy为71.53，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 79.15,
+    "reason": "D2 Distribution Similarity为79.15，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "I2 Insight Grounding Rate",
+    "score": 87.5,
+    "reason": "I2 Insight Grounding Rate为87.50，低于通过阈值90.00。",
+    "suggestion": "检查洞察证据字段和statistics_reference是否来自真实统计。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 71.53,
+    "reason": "D1 Consumption Preference Accuracy为71.53，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 79.15,
+    "reason": "D2 Distribution Similarity为79.15，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "I2 Insight Grounding Rate",
+    "score": 87.5,
+    "reason": "I2 Insight Grounding Rate为87.50，低于通过阈值90.00。",
+    "suggestion": "检查洞察证据字段和statistics_reference是否来自真实统计。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 71.53,
+    "reason": "D1 Consumption Preference Accuracy为71.53，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 79.15,
+    "reason": "D2 Distribution Similarity为79.15，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "I2 Insight Grounding Rate",
+    "score": 87.5,
+    "reason": "I2 Insight Grounding Rate为87.50，低于通过阈值90.00。",
+    "suggestion": "检查洞察证据字段和statistics_reference是否来自真实统计。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 62.5,
+    "reason": "S1 Strategy Golden Rule Coverage为62.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  }
+]

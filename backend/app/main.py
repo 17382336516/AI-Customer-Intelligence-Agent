@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Annotated
 
 import pandas as pd
-from fastapi import BackgroundTasks, Depends, FastAPI, File, HTTPException, UploadFile, status
+from fastapi import BackgroundTasks, Depends, FastAPI, File, Form, HTTPException, Request, UploadFile, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
@@ -79,6 +79,7 @@ def _dataset_response(record, preview: dict | None = None, record_count: int = 0
     return DatasetResponse(
         id=record.id,
         name=record.name,
+        display_name=getattr(record, "display_name", "") or "",
         file_type=record.file_type,
         row_count=record.row_count,
         quality=QualityReport.model_validate(json.loads(record.quality_json)),
@@ -133,8 +134,8 @@ def _run_analysis(analysis_id: str, payload: dict[str, str]) -> None:
             analysis_session.id,
             payload["question"],
         )
-        # 数据资产复用：若同一数据集已有沉淀的洞察资产，则直接读取缓存，
-        # 跳过数据清洗 / 分群 / Insight Agent，仅基于既有洞察生成策略。
+        # 数据资产复用：只复用同一数据集的清洗、分群与消费趋势；
+        # Insight / Knowledge / Strategy 仍按每个业务问题重新执行。
         cached = repository.get_cache(dataset.id)
         cached_analysis: dict[str, Any] | None = None
         if cached is not None:
@@ -278,6 +279,7 @@ def agent_manifest() -> dict:
 async def upload_dataset(
     session: SessionDep,
     file: Annotated[UploadFile, File()],
+    display_name: Annotated[str, Form()] = "",
 ) -> DatasetResponse:
     suffix = Path(file.filename or "").suffix.lower()
     if suffix not in {".csv", ".xlsx", ".xls"}:
@@ -317,6 +319,8 @@ async def upload_dataset(
         existing.row_count = total_rows
         existing.quality_json = json.dumps(quality, ensure_ascii=False)
         existing.fingerprint = fingerprint
+        if display_name:
+            existing.display_name = display_name
         session.add(existing)
         session.commit()
         record = existing
@@ -328,6 +332,7 @@ async def upload_dataset(
             row_count=total_rows,
             quality=quality,
             fingerprint=fingerprint,
+            display_name=display_name,
         )
     return _dataset_response(record, preview)
 
@@ -337,7 +342,10 @@ async def upload_dataset(
     response_model=DatasetResponse,
     status_code=status.HTTP_201_CREATED,
 )
-def create_demo_dataset(session: SessionDep) -> DatasetResponse:
+def create_demo_dataset(
+    session: SessionDep,
+    display_name: Annotated[str, Form()] = "",
+) -> DatasetResponse:
     randomizer = random.Random(42)
     now = datetime.now(UTC).replace(tzinfo=None)
     personas = {
@@ -395,6 +403,8 @@ def create_demo_dataset(session: SessionDep) -> DatasetResponse:
         existing.file_type = "csv"
         existing.row_count = len(frame)
         existing.quality_json = json.dumps(quality, ensure_ascii=False)
+        if display_name:
+            existing.display_name = display_name
         session.add(existing)
         session.commit()
         record = existing
@@ -405,6 +415,7 @@ def create_demo_dataset(session: SessionDep) -> DatasetResponse:
             file_type="csv",
             row_count=len(frame),
             quality=quality,
+            display_name=display_name,
         )
     return _dataset_response(record, preview)
 
@@ -414,6 +425,29 @@ def get_dataset(dataset_id: str, session: SessionDep) -> DatasetResponse:
     record = Repository(session).get_dataset(dataset_id)
     if record is None:
         raise HTTPException(status_code=404, detail="数据集不存在。")
+    return _dataset_response(record)
+
+
+@app.patch("/api/v1/datasets/{dataset_id}/display-name", response_model=DatasetResponse)
+async def rename_dataset(
+    dataset_id: str,
+    session: SessionDep,
+    request: Request,
+) -> DatasetResponse:
+    """自定义左侧数据集卡片的显示名称。"""
+    content_type = request.headers.get("content-type", "")
+    if "application/json" in content_type:
+        payload = await request.json()
+        display_name = str(payload.get("display_name", ""))
+    else:
+        form = await request.form()
+        display_name = str(form.get("display_name", ""))
+    record = Repository(session).get_dataset(dataset_id)
+    if record is None:
+        raise HTTPException(status_code=404, detail="数据集不存在。")
+    record.display_name = display_name or ""
+    session.add(record)
+    session.commit()
     return _dataset_response(record)
 
 

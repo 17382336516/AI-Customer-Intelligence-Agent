@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "evaluation_run_metadata": {
+    "evaluation_version": "v5",
+    "benchmark_version": "v1",
+    "dataset_version": "v1",
+    "model_version": "strategy_planning_v4",
+    "model_mode": "deterministic_fallback",
+    "prompt_version": "1.0",
+    "knowledge_base_version": "enterprise_rag_v3",
+    "question_count": 45
+  },
+  "metrics": {
+    "data": {"d1": 91.11, "d2": 98.83, "data_score": 93.43},
+    "insight": {"i1": 100.0, "i2": 100.0, "insight_score": 100.0},
+    "knowledge": {"k1_recall_at_3": 48.33, "k2_mrr": 60.67, "knowledge_coverage_score": 48.33, "knowledge_score": 52.03},
+    "strategy": {"s1_golden_coverage": 72.15, "s2_knowledge_adoption": 62.78, "s3_risk_violation": 0.0, "strategy_score": 73.98},
+    "overall_score": 79.99,
+    "e2e_pass_count": 8,
+    "e2e_pass_rate": 17.78
+  },
+  "dataset_summaries": {
+    "dataset_01_general": {"questions": 15, "average_overall_score": 82.46, "e2e_pass_count": 3},
+    "dataset_02_growth_campaign": {"questions": 15, "average_overall_score": 76.64, "e2e_pass_count": 1},
+    "dataset_03_retention_interest": {"questions": 15, "average_overall_score": 80.86, "e2e_pass_count": 4}
+  },
+  "source_result_files": ["v5_dataset_01_results.json", "v5_dataset_02_results.json", "v5_dataset_03_results.json"]
+}

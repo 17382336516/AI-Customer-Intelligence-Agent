@@ -24,6 +24,7 @@ class DatasetRecord(Base):
 
     id: Mapped[str] = mapped_column(String(36), primary_key=True)
     name: Mapped[str] = mapped_column(String(255), index=True)
+    display_name: Mapped[str] = mapped_column(String(255), default="")
     file_path: Mapped[str] = mapped_column(Text)
     file_type: Mapped[str] = mapped_column(String(16))
     row_count: Mapped[int] = mapped_column(default=0)
@@ -172,7 +173,7 @@ def init_db() -> None:
 def _migrate_datasets_columns() -> None:
     from sqlalchemy import inspect
 
-    expected = {"fingerprint": "VARCHAR(64)"}
+    expected = {"fingerprint": "VARCHAR(64)", "display_name": "VARCHAR(255)"}
     with engine.begin() as conn:
         existing = {col["name"] for col in inspect(engine).get_columns("datasets")}
         for column, ctype in expected.items():
@@ -208,10 +209,12 @@ class Repository:
         row_count: int,
         quality: dict[str, Any],
         fingerprint: str = "",
+        display_name: str = "",
     ) -> DatasetRecord:
         record = DatasetRecord(
             id=str(uuid.uuid4()),
             name=name,
+            display_name=display_name,
             file_path=file_path,
             file_type=file_type,
             row_count=row_count,
@@ -502,6 +505,11 @@ class Repository:
                 "segment_method",
                 "quality",
             )
+        }
+        evaluation_artifacts = result.get("evaluation_artifacts", {}) or {}
+        result_copy["evaluation_artifacts"] = {
+            "schema_version": evaluation_artifacts.get("schema_version", "1.0"),
+            "data_agent": evaluation_artifacts.get("data_agent", {}),
         }
         if record is None:
             record = DatasetAnalysisCache(dataset_id=dataset_id)

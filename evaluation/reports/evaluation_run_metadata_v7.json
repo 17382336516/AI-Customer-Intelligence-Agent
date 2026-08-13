@@ -1,0 +1,17 @@
+{
+  "evaluation_run_id": "evaluation_v7_20260810T203044Z",
+  "evaluation_version": "v7",
+  "benchmark_version": "v1",
+  "model_mode": "deterministic_fallback",
+  "model_version": "qwen3.7-plus",
+  "prompt_version": "v1",
+  "knowledge_base_version": "enterprise_rag_v3",
+  "grounding_version": "business_concept_alignment_v2",
+  "evaluation_time": "2026-08-10T20:30:44.251866+00:00",
+  "datasets": [
+    "dataset_01_general",
+    "dataset_02_growth_campaign",
+    "dataset_03_retention_interest"
+  ],
+  "questions": 45
+}

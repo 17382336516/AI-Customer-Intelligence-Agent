@@ -1,0 +1,7 @@
+{
+  "young_user_growth": {"document_types": ["user_growth", "product", "marketing_case", "brand"], "business_goals": ["young_user_growth", "activation"]},
+  "user_recall": {"document_types": ["marketing_case", "operation_rule", "product"], "business_goals": ["recall", "retention"]},
+  "activity_operation": {"document_types": ["marketing_case", "operation_rule"], "business_goals": ["campaign", "conversion"]},
+  "product_recommendation": {"document_types": ["product", "marketing_case"], "business_goals": ["recommendation", "conversion"]},
+  "retention": {"document_types": ["operation_rule", "product", "user_growth"], "business_goals": ["retention", "activation"]}
+}

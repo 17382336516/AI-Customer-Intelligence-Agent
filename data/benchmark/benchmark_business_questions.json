@@ -1,0 +1,272 @@
+[
+  {
+    "question_id": "dataset_01_general_q01",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户增长",
+    "question": "如何提升综合消费基准中年轻成长用户的首次转化和持续参与？"
+  },
+  {
+    "question_id": "dataset_01_general_q02",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户增长",
+    "question": "综合消费基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？"
+  },
+  {
+    "question_id": "dataset_01_general_q03",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户增长",
+    "question": "如何在综合消费基准中识别并运营年轻、非一线城市的潜力用户？"
+  },
+  {
+    "question_id": "dataset_01_general_q04",
+    "dataset_id": "dataset_01_general",
+    "business_category": "复购提升",
+    "question": "如何提升综合消费基准中高价值用户的复购并避免过度补贴？"
+  },
+  {
+    "question_id": "dataset_01_general_q05",
+    "dataset_id": "dataset_01_general",
+    "business_category": "复购提升",
+    "question": "综合消费基准中哪些用户适合会员升级运营，如何设置触发条件？"
+  },
+  {
+    "question_id": "dataset_01_general_q06",
+    "dataset_id": "dataset_01_general",
+    "business_category": "复购提升",
+    "question": "如何提升综合消费基准中价格敏感用户的复购而不形成优惠依赖？"
+  },
+  {
+    "question_id": "dataset_01_general_q07",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户召回",
+    "question": "如何召回综合消费基准中的长期未购用户，并控制打扰风险？"
+  },
+  {
+    "question_id": "dataset_01_general_q08",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户召回",
+    "question": "综合消费基准中哪些长期未购用户值得优先召回？"
+  },
+  {
+    "question_id": "dataset_01_general_q09",
+    "dataset_id": "dataset_01_general",
+    "business_category": "用户召回",
+    "question": "如何用历史品类偏好召回综合消费基准中的长期未购用户？"
+  },
+  {
+    "question_id": "dataset_01_general_q10",
+    "dataset_id": "dataset_01_general",
+    "business_category": "活动运营",
+    "question": "综合消费基准中哪些用户适合618活动，权益应如何分层？"
+  },
+  {
+    "question_id": "dataset_01_general_q11",
+    "dataset_id": "dataset_01_general",
+    "business_category": "活动运营",
+    "question": "如何为综合消费基准设计兼顾年轻用户与家庭用户的春节活动？"
+  },
+  {
+    "question_id": "dataset_01_general_q12",
+    "dataset_id": "dataset_01_general",
+    "business_category": "活动运营",
+    "question": "综合消费基准适合怎样的年轻化周年节点活动？"
+  },
+  {
+    "question_id": "dataset_01_general_q13",
+    "dataset_id": "dataset_01_general",
+    "business_category": "商品推荐",
+    "question": "综合消费基准中哪些用户适合电子产品新品推荐？"
+  },
+  {
+    "question_id": "dataset_01_general_q14",
+    "dataset_id": "dataset_01_general",
+    "business_category": "商品推荐",
+    "question": "如何为综合消费基准中的美妆或家居兴趣用户做关联推荐？"
+  },
+  {
+    "question_id": "dataset_01_general_q15",
+    "dataset_id": "dataset_01_general",
+    "business_category": "商品推荐",
+    "question": "基于综合消费基准的消费行为，哪些用户适合推荐低门槛攒钱产品？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q01",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户增长",
+    "question": "如何提升年轻增长与促销基准中年轻成长用户的首次转化和持续参与？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q02",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户增长",
+    "question": "年轻增长与促销基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q03",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户增长",
+    "question": "如何在年轻增长与促销基准中识别并运营年轻、非一线城市的潜力用户？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q04",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "复购提升",
+    "question": "如何提升年轻增长与促销基准中高价值用户的复购并避免过度补贴？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q05",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "复购提升",
+    "question": "年轻增长与促销基准中哪些用户适合会员升级运营，如何设置触发条件？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q06",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "复购提升",
+    "question": "如何提升年轻增长与促销基准中价格敏感用户的复购而不形成优惠依赖？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q07",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户召回",
+    "question": "如何召回年轻增长与促销基准中的长期未购用户，并控制打扰风险？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q08",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户召回",
+    "question": "年轻增长与促销基准中哪些长期未购用户值得优先召回？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q09",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "用户召回",
+    "question": "如何用历史品类偏好召回年轻增长与促销基准中的长期未购用户？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q10",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "活动运营",
+    "question": "年轻增长与促销基准中哪些用户适合618活动，权益应如何分层？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q11",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "活动运营",
+    "question": "如何为年轻增长与促销基准设计兼顾年轻用户与家庭用户的春节活动？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q12",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "活动运营",
+    "question": "年轻增长与促销基准适合怎样的年轻化周年节点活动？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q13",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "商品推荐",
+    "question": "年轻增长与促销基准中哪些用户适合电子产品新品推荐？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q14",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "商品推荐",
+    "question": "如何为年轻增长与促销基准中的美妆或家居兴趣用户做关联推荐？"
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q15",
+    "dataset_id": "dataset_02_growth_campaign",
+    "business_category": "商品推荐",
+    "question": "基于年轻增长与促销基准的消费行为，哪些用户适合推荐低门槛攒钱产品？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q01",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户增长",
+    "question": "如何提升留存与品类兴趣基准中年轻成长用户的首次转化和持续参与？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q02",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户增长",
+    "question": "留存与品类兴趣基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q03",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户增长",
+    "question": "如何在留存与品类兴趣基准中识别并运营年轻、非一线城市的潜力用户？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q04",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "复购提升",
+    "question": "如何提升留存与品类兴趣基准中高价值用户的复购并避免过度补贴？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q05",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "复购提升",
+    "question": "留存与品类兴趣基准中哪些用户适合会员升级运营，如何设置触发条件？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q06",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "复购提升",
+    "question": "如何提升留存与品类兴趣基准中价格敏感用户的复购而不形成优惠依赖？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q07",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户召回",
+    "question": "如何召回留存与品类兴趣基准中的长期未购用户，并控制打扰风险？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q08",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户召回",
+    "question": "留存与品类兴趣基准中哪些长期未购用户值得优先召回？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q09",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "用户召回",
+    "question": "如何用历史品类偏好召回留存与品类兴趣基准中的长期未购用户？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q10",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "活动运营",
+    "question": "留存与品类兴趣基准中哪些用户适合618活动，权益应如何分层？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q11",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "活动运营",
+    "question": "如何为留存与品类兴趣基准设计兼顾年轻用户与家庭用户的春节活动？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q12",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "活动运营",
+    "question": "留存与品类兴趣基准适合怎样的年轻化周年节点活动？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q13",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "商品推荐",
+    "question": "留存与品类兴趣基准中哪些用户适合电子产品新品推荐？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q14",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "商品推荐",
+    "question": "如何为留存与品类兴趣基准中的美妆或家居兴趣用户做关联推荐？"
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q15",
+    "dataset_id": "dataset_03_retention_interest",
+    "business_category": "商品推荐",
+    "question": "基于留存与品类兴趣基准的消费行为，哪些用户适合推荐低门槛攒钱产品？"
+  }
+]

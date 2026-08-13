@@ -1,0 +1,17 @@
+{
+  "high_value_user": [
+    "高价值用户", "核心价值用户", "高消费高频用户", "高客单用户", "高频复购用户", "高消费", "high value", "high spend"
+  ],
+  "young_growth_user": [
+    "年轻成长用户", "青年潜力用户", "年轻消费者", "年轻用户", "活跃成长用户", "高潜用户", "young", "growth"
+  ],
+  "price_sensitive_user": [
+    "价格敏感用户", "促销敏感用户", "优惠偏好用户", "低客单用户", "优惠券用户", "促销用户", "price sensitive", "coupon"
+  ],
+  "category_interest_user": [
+    "品类兴趣用户", "品类偏好用户", "垂直品类用户", "手机消费人群", "电子产品消费人群", "美妆消费人群", "咖啡消费人群", "家电消费人群", "category interest", "品类集中"
+  ],
+  "scenario_enhanced_churn_user": [
+    "沉默用户", "长期未购买用户", "低活跃待召回用户", "沉默人群", "低活跃用户", "待召回用户", "silent", "inactive", "churn"
+  ]
+}

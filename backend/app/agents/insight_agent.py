@@ -6,6 +6,7 @@ from typing import Any
 from ..config import settings
 from ..database import Repository
 from ..services.data_tools import category_display
+from ..services.lifecycle_classifier import classify_segment_lifecycle
 from ..services.llm import LLMClient
 
 
@@ -15,6 +16,81 @@ class InsightAgent:
     def __init__(self, repository: Repository, llm: LLMClient | None = None):
         self.repository = repository
         self.llm = llm or LLMClient()
+
+    @staticmethod
+    def _evaluation_artifacts(
+        insights: list[dict[str, Any]],
+        segments: list[dict[str, Any]],
+        user_features: Any = None,
+        customer_lifecycle_predictions: list[dict[str, Any]] | None = None,
+    ) -> dict[str, Any]:
+        segment_by_id = {item.get("segment_id"): item for item in segments}
+        lifecycle_by_customer = {
+            str(item.get("customer_id", "")): item
+            for item in (customer_lifecycle_predictions or [])
+        }
+        segment_distributions: list[dict[str, Any]] = []
+        records: list[dict[str, Any]] = []
+        for insight in insights:
+            segment = segment_by_id.get(insight.get("segment_id"), {})
+            stats = segment.get("statistics", {}) or {}
+            evidence_fields = [
+                "total_consumption",
+                "purchase_frequency",
+                "last_purchase_days",
+                "product_category",
+            ]
+            if stats.get("average_income") is not None:
+                evidence_fields.append("income")
+            lifecycle = classify_segment_lifecycle(segment, user_features)
+            segment_key = str(segment.get("segment_id", "")).removeprefix("cat::")
+            customer_ids: list[str] = []
+            if user_features is not None and hasattr(user_features, "columns") and "main_category_user" in user_features.columns:
+                customer_ids = [str(value) for value in user_features.loc[
+                    user_features["main_category_user"].astype(str) == segment_key, "user_id"
+                ].tolist()]
+            tag_counts: dict[str, int] = {}
+            user_evidence: list[dict[str, Any]] = []
+            for customer_id in customer_ids:
+                prediction = lifecycle_by_customer.get(customer_id, {})
+                for tag in prediction.get("lifecycle_tags", []) or []:
+                    tag_counts[tag] = tag_counts.get(tag, 0) + 1
+                user_evidence.extend(prediction.get("lifecycle_evidence", []) or [])
+            denominator = len(customer_ids) or 1
+            distribution = {tag: round(count / denominator, 4) for tag, count in tag_counts.items()}
+            dominant_tags = [tag for tag, _ in sorted(tag_counts.items(), key=lambda item: item[1], reverse=True)[:3]]
+            segment_distributions.append({
+                "segment": segment_key,
+                "lifecycle_distribution": distribution,
+                "lifecycle_evidence": user_evidence[:20],
+            })
+            records.append(
+                {
+                    "segment_name": insight.get("segment_name", ""),
+                    "insight_text": "\n".join(
+                        str(insight.get(field, "")).strip()
+                        for field in ("profile", "motivation", "trend_explanation")
+                        if str(insight.get(field, "")).strip()
+                    ),
+                    "evidence_fields": evidence_fields,
+                    "statistics_reference": {
+                        "main_category": stats.get("main_category"),
+                        "average_spend": stats.get("average_spend"),
+                        "average_frequency": stats.get("average_frequency"),
+                        "average_recency": stats.get("average_recency"),
+                        "average_income": stats.get("average_income"),
+                    },
+                    "lifecycle_tags": dominant_tags or lifecycle["lifecycle_tags"],
+                    "dominant_lifecycle_tags": dominant_tags,
+                    "lifecycle_distribution": distribution,
+                    "lifecycle_evidence": user_evidence[:20] or lifecycle["lifecycle_evidence"],
+                }
+            )
+        return {
+            "insight_records": records,
+            "customer_lifecycle_predictions": customer_lifecycle_predictions or [],
+            "segment_lifecycle_distribution": segment_distributions,
+        }
 
     def _base_insight(self, segment: dict[str, Any], cleaned: Any = None) -> dict[str, Any]:
         stats = segment.get("statistics", {}) or {}
@@ -268,7 +344,7 @@ class InsightAgent:
 
     def run(self, state: dict[str, Any]) -> dict[str, Any]:
         if state.get("blocked") or state.get("route") == "quality_only":
-            return {"insights": []}
+            return {"insights": [], "insight_agent_artifacts": {"insight_records": []}}
 
         target_segments = state.get("segments", [])[:3]
         cleaned = state.get("_cleaned_df")
@@ -289,4 +365,13 @@ class InsightAgent:
             "insights_created",
             {"count": len(insights), "model_mode": model_mode},
         )
-        return {"insights": insights, "model_mode": model_mode}
+        return {
+            "insights": insights,
+            "insight_agent_artifacts": self._evaluation_artifacts(
+                insights,
+                target_segments,
+                state.get("_features_df"),
+                (state.get("data_agent_artifacts") or {}).get("customer_lifecycle_predictions", []),
+            ),
+            "model_mode": model_mode,
+        }

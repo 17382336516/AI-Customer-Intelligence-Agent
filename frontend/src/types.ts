@@ -22,6 +22,8 @@ export interface QualityReport {
 export interface Dataset {
   id: string
   name: string
+  /** 用户自定义的左侧显示名称（为空时回退到 name） */
+  display_name: string
   file_type: string
   row_count: number
   quality: QualityReport
@@ -283,6 +285,7 @@ export interface Session {
   id: string
   dataset_id: string
   dataset_name: string
+  display_name?: string
   name: string
   status: string
   summary: string

@@ -22,6 +22,17 @@ frontend/_tsc.txt
 *.log
 run.err.log
 run.out.log
+
+# Local/private datasets and runtime state
+data/Online_Retail.xlsx
+data/processed/
+data/uploads/
+data/*.xlsx
+data/*.xls
+data/*.csv
+backend/data/uploads/
+backend/data/*.db
+*.sqlite
+*.sqlite3
 dev.err.log
 dev.out.log
-

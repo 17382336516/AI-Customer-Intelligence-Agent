@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -15,6 +16,9 @@ from sklearn.preprocessing import StandardScaler
 from ..config import settings
 
 FIELD_ALIASES: dict[str, tuple[str, ...]] = {
+    "age": ("age", "年龄", "年齡"),
+    "coupon_usage": ("coupon_usage", "coupon_count", "优惠券使用次数", "优惠券次数"),
+    "promotion_behavior": ("promotion_behavior", "promotion_count", "促销行为", "促销次数"),
     "user_id": ("user_id", "userid", "user", "uid", "用户id", "用户_id", "客户id"),
     "amount": ("amount", "price", "gmv", "sales", "金额", "消费金额", "订单金额", "实付"),
     # 收入字段：仅作为「输入属性 / 用户画像字段」，系统不负责按收入筛选人群。
@@ -148,6 +152,27 @@ def _category_from_text(value: str) -> str:
     return "other"
 
 
+def _canonical_category_from_hierarchy(value: Any) -> str | None:
+    text = "" if value is None else str(value).strip().lower().replace(" ", "")
+    if not text or text in {"nan", "none", "null"}:
+        return None
+    path = Path(__file__).resolve().parents[3] / "evaluation" / "category_hierarchy_mapping.json"
+    try:
+        mapping = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    for key, spec in mapping.items():
+        canonical = str(spec.get("canonical_name", key)).strip().lower()
+        aliases = {canonical, *(str(a).strip().lower().replace(" ", "") for a in spec.get("aliases", []))}
+        if text in aliases:
+            return canonical
+        for child, child_aliases in spec.get("children", {}).items():
+            child_values = {str(child).lower(), *(str(a).strip().lower().replace(" ", "") for a in child_aliases)}
+            if text in child_values:
+                return canonical
+    return None
+
+
 def normalize_category(category: Any, product: Any = "") -> str:
     """品类标准化：结构化原始 category 优先，关键词匹配仅作兜底。
 
@@ -160,6 +185,9 @@ def normalize_category(category: Any, product: Any = "") -> str:
     electronics.smartphone 之外的字段误并入 smartphone）。
     """
     raw = "" if category is None else str(category).strip()
+    canonical = _canonical_category_from_hierarchy(raw)
+    if canonical:
+        return canonical
     if _looks_structured(raw):
         return raw
     # 原始 category 不是结构化值：尝试用 category 本身做关键词兜底。
@@ -169,7 +197,8 @@ def normalize_category(category: Any, product: Any = "") -> str:
             return guessed
     # 仍无法解析：退回用 product 关键词兜底（绝不把原始 category 与 product 拼接后猜测）。
     product_text = "" if product is None else str(product)
-    return _category_from_text(product_text)
+    canonical = _canonical_category_from_hierarchy(product_text)
+    return canonical or _category_from_text(product_text)
 
 CATEGORY_CN: dict[str, str] = {
     "smartphone": "智能手机",
@@ -584,6 +613,9 @@ def clean_dataset(raw: pd.DataFrame, mapping: dict[str, str]) -> tuple[pd.DataFr
         )
     else:
         renamed["amount"] = pd.to_numeric(renamed["amount"], errors="coerce")
+    for field in ("age", "coupon_usage", "promotion_behavior"):
+        if field in renamed.columns:
+            renamed[field] = pd.to_numeric(renamed[field], errors="coerce")
     # 收入字段：仅作用户画像属性，系统不据此筛选人群。
     # 解析失败/缺失统一置为 NaN（表示「样本未提供收入」，下游优雅降级）。
     if "income" in renamed.columns:
@@ -651,6 +683,9 @@ def build_user_features(cleaned: pd.DataFrame) -> pd.DataFrame:
         view_count=("event_type", lambda values: int((values.str.lower() == "view").sum())),
         event_count=("event_type", "size"),
     )
+    for field in ("age", "coupon_usage", "promotion_behavior"):
+        if field in cleaned.columns:
+            features[field] = grouped[field].mean()
     # 加权行为特征：直接基于「标准化后的品类」(normalized_category) 的真实取值，
     # 不再把数据强行映射到固定的兜底 key 集合（CATEGORY_PATTERNS）。
     # 这样主品类统计会忠实反映原始结构化分布（如 electronics.smartphone
@@ -668,16 +703,29 @@ def build_user_features(cleaned: pd.DataFrame) -> pd.DataFrame:
     )
     count_long = cleaned.groupby(["user_id", "normalized_category"], observed=True).size().unstack(fill_value=0)
     count_shares = count_long.div(count_long.sum(axis=1).replace(0, np.nan), axis=0).fillna(0.0)
+    recent_cut = cleaned["event_time"].max() - pd.Timedelta(days=30)
+    recent = cleaned[cleaned["event_time"] >= recent_cut]
+    recent_long = recent.groupby(["user_id", "normalized_category"], observed=True).size().unstack(fill_value=0)
+    recent_shares = recent_long.div(recent_long.sum(axis=1).replace(0, np.nan), axis=0).fillna(0.0)
+    purchase_long = cleaned[cleaned["event_type"].astype(str).str.lower() == "purchase"].pivot_table(
+        index="user_id", columns="normalized_category", values="amount", aggfunc="sum", fill_value=0.0
+    )
 
     weighted_matrix = pivot_weighted.reindex(features.index).fillna(0.0)
     share_matrix = count_shares.reindex(features.index).fillna(0.0)
     # 一次性拼接品类列，避免逐列 insert 导致的 DataFrame 碎片化（品类数较多时明显）。
     cat_cols: dict[str, pd.Series] = {}
     for category in weighted_matrix.columns:
+        cat_cols[f"{category}_purchase_amount"] = purchase_long.get(
+            category, pd.Series(0.0, index=features.index)
+        ).reindex(features.index).fillna(0.0)
         cat_cols[f"{category}_weighted"] = weighted_matrix[category]
         cat_cols[f"{category}_share"] = share_matrix.get(
             category, pd.Series(0.0, index=features.index)
         )
+        cat_cols[f"{category}_recent_share"] = recent_shares.get(
+            category, pd.Series(0.0, index=features.index)
+        ).reindex(features.index).fillna(0.0)
     features = pd.concat([features, pd.DataFrame(cat_cols, index=features.index)], axis=1)
 
     features = features.fillna(0)
@@ -776,20 +824,83 @@ CLUSTERING_FEATURES: tuple[str, ...] = (
 
 
 def user_main_category(features: pd.DataFrame) -> pd.Series:
-    """计算每个用户的主品类（基于金额×行为权重的加权贡献最高者）。
+    """按金额优先的类别评分选择用户主品类。"""
+    details = user_category_score_details(features)
+    return pd.Series(
+        [item["predicted_category"] for item in details],
+        index=features.index,
+        dtype=object,
+    )
 
-    返回 user_id -> 主品类 key 的 Series。加权列名为 {品类}_weighted。
-    若某用户所有品类加权均为 0，返回 None（视为无明确偏好）。
+
+def user_category_score_details(features: pd.DataFrame) -> list[dict[str, Any]]:
+    """计算主品类、置信度和可审计证据。
+
+    评分严格使用用户级真实比例：金额占比优先，购买频次和近期活跃作为扣分项。
     """
     weighted_cols = [c for c in features.columns if c.endswith("_weighted")]
-    if not weighted_cols:
-        return pd.Series(None, index=features.index, dtype=object)
-    wm = features[weighted_cols].copy()
-    wm.columns = [c[: -len("_weighted")] for c in wm.columns]
-    # 每个用户加权最高的品类
-    main = wm.idxmax(axis=1)
-    main = main.where(wm.max(axis=1) > 0, other=None)
-    return main
+    categories = [c[: -len("_weighted")] for c in weighted_cols]
+    if not categories:
+        return [{"predicted_category": None, "confidence": 0.0, "evidence": []} for _ in features.index]
+    results: list[dict[str, Any]] = []
+    for idx in features.index:
+        row = features.loc[idx]
+        amounts = {cat: max(float(row.get(f"{cat}_purchase_amount", 0.0) or 0.0), 0.0) for cat in categories}
+        if sum(amounts.values()) <= 0:
+            amounts = {cat: max(float(row.get(f"{cat}_weighted", 0.0) or 0.0), 0.0) for cat in categories}
+        total_amount = sum(amounts.values())
+        if total_amount <= 0:
+            results.append({"predicted_category": None, "confidence": 0.0, "evidence": []})
+            continue
+        valid_categories = [
+            cat
+            for cat in categories
+            if amounts[cat] > 0
+            or float(row.get(f"{cat}_share", 0.0) or 0.0) > 0
+            or float(row.get(f"{cat}_recent_share", 0.0) or 0.0) > 0
+        ]
+        if len(valid_categories) == 1 and abs(amounts[valid_categories[0]] / total_amount - 1.0) < 1e-9:
+            only = valid_categories[0]
+            amount_ratio = 1.0
+            frequency_ratio = float(row.get(f"{only}_share", 0.0) or 0.0)
+            recent_ratio = float(row.get(f"{only}_recent_share", 0.0) or 0.0)
+            score = 0.5 * amount_ratio - 0.3 * frequency_ratio - 0.2 * recent_ratio
+            results.append({
+                "predicted_category": only,
+                "confidence": 1.0,
+                "evidence": [
+                    f"消费金额占比{amount_ratio:.1%}",
+                    f"购买频次占比{frequency_ratio:.1%}",
+                    f"近期活跃占比{recent_ratio:.1%}",
+                    f"category_score={score:.4f}",
+                ],
+            })
+            continue
+        scores: dict[str, float] = {}
+        ratios: dict[str, tuple[float, float, float]] = {}
+        for cat in valid_categories:
+            amount_ratio = amounts[cat] / total_amount
+            frequency_ratio = float(row.get(f"{cat}_share", 0.0) or 0.0)
+            recent_ratio = float(row.get(f"{cat}_recent_share", 0.0) or 0.0)
+            scores[cat] = 0.5 * amount_ratio - 0.3 * frequency_ratio - 0.2 * recent_ratio
+            ratios[cat] = (amount_ratio, frequency_ratio, recent_ratio)
+        ordered = sorted(scores.items(), key=lambda item: item[1], reverse=True)
+        best, best_score = ordered[0]
+        second_score = ordered[1][1] if len(ordered) > 1 else best_score
+        confidence = max(0.0, min(1.0, 0.5 + (best_score - second_score) * 2.0))
+        amount_ratio, frequency_ratio, recent_ratio = ratios[best]
+        evidence = [
+            f"消费金额占比{amount_ratio:.1%}",
+            f"购买频次占比{frequency_ratio:.1%}",
+            f"近期活跃占比{recent_ratio:.1%}",
+            f"category_score={best_score:.4f}",
+        ]
+        results.append({
+            "predicted_category": best,
+            "confidence": round(confidence, 4),
+            "evidence": evidence,
+        })
+    return results
 
 
 def _parent_category(category: str) -> str | None:
@@ -1556,7 +1667,7 @@ def analyze_file(path: str | Path) -> DataToolResult:
         )
         return DataToolResult(quality, cleaned, None, [], stats, {}, {}, None)
     features = build_user_features(cleaned)
-    _, segments, cluster_quality = segment_by_category(cleaned, features)
+    features, segments, cluster_quality = segment_by_category(cleaned, features)
     # 保留 KMeans 仅作辅助价值分层（不影响 segment_id）
     features, _, _ = segment_users(features)
     category_debug, category_warning = build_category_debug(raw, cleaned, quality["field_mapping"])

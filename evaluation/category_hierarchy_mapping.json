@@ -1,0 +1,44 @@
+{
+  "electronics": {
+    "canonical_name": "electronics",
+    "aliases": ["electronics", "electronic", "电子产品", "数码电子", "数码", "3c", "手机", "智能手机", "电脑", "笔记本", "电脑办公"],
+    "children": {"electronics.mobile": ["mobile", "smartphone"], "electronics.computer": ["computer", "notebook"]}
+  },
+  "beauty": {
+    "canonical_name": "beauty",
+    "aliases": ["beauty", "美妆", "美容", "护肤", "化妆品", "beauty.skincare"],
+    "children": {"beauty.skincare": ["skincare"]}
+  },
+  "mother_baby": {
+    "canonical_name": "mother_baby",
+    "aliases": ["mother_baby", "motherbaby", "kids", "baby", "母婴", "母婴儿童", "儿童", "婴幼儿"],
+    "children": {"mother_baby.kids": ["kids", "baby_products"]}
+  },
+  "apparel": {
+    "canonical_name": "apparel",
+    "aliases": ["apparel", "clothing", "fashion", "服饰", "服装", "服饰鞋履", "鞋", "鞋履"],
+    "children": {"apparel.shoes": ["shoes"]}
+  },
+  "food": {
+    "canonical_name": "food",
+    "aliases": ["food", "食品", "零食", "饮料", "食品饮料", "茶饮", "咖啡"],
+    "children": {"food.coffee": ["coffee"]}
+  },
+  "home": {
+    "canonical_name": "home",
+    "aliases": ["home", "家具", "家居", "家居家具", "家居日用", "家电", "appliance"],
+    "children": {"home.appliance": ["appliances"]}
+  },
+  "sports": {
+    "canonical_name": "sports",
+    "aliases": ["sports", "sport", "运动", "运动健身", "健身"]
+  },
+  "travel": {
+    "canonical_name": "travel",
+    "aliases": ["travel", "旅行", "旅游", "出行", "机票", "酒店"]
+  },
+  "other": {
+    "canonical_name": "other",
+    "aliases": ["other", "综合兴趣", "未知", "综合"]
+  }
+}

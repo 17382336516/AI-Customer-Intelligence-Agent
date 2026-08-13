@@ -1,0 +1,2474 @@
+[
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "OverallScore",
+    "score": 63.98,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "OverallScore",
+    "score": 73.85,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "OverallScore",
+    "score": 44.98,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q04",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q04",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q04",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q04",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 65.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q05",
+    "failed_metric": "OverallScore",
+    "score": 73.6,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q06",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q06",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q06",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q06",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q06",
+    "failed_metric": "OverallScore",
+    "score": 79.73,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q07",
+    "failed_metric": "OverallScore",
+    "score": 69.73,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q08",
+    "failed_metric": "OverallScore",
+    "score": 63.35,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q09",
+    "failed_metric": "OverallScore",
+    "score": 66.85,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 66.67,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q10",
+    "failed_metric": "OverallScore",
+    "score": 65.02,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "K2 MRR",
+    "score": 0.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q11",
+    "failed_metric": "OverallScore",
+    "score": 48.98,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q12",
+    "failed_metric": "OverallScore",
+    "score": 52.6,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q13",
+    "failed_metric": "OverallScore",
+    "score": 61.98,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q14",
+    "failed_metric": "OverallScore",
+    "score": 70.48,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "K1 Recall@3",
+    "score": 75.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 25.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q15",
+    "failed_metric": "OverallScore",
+    "score": 67.67,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "OverallScore",
+    "score": 63.99,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "OverallScore",
+    "score": 73.86,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "K2 MRR",
+    "score": 20.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "OverallScore",
+    "score": 45.19,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 65.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "OverallScore",
+    "score": 73.61,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "K2 MRR",
+    "score": 33.33,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "OverallScore",
+    "score": 78.74,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "K2 MRR",
+    "score": 33.33,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "OverallScore",
+    "score": 68.74,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "OverallScore",
+    "score": 63.36,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "K2 MRR",
+    "score": 33.33,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "OverallScore",
+    "score": 65.86,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 66.67,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "OverallScore",
+    "score": 65.03,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "K2 MRR",
+    "score": 0.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "OverallScore",
+    "score": 48.99,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "OverallScore",
+    "score": 52.61,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "OverallScore",
+    "score": 61.99,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "OverallScore",
+    "score": 70.49,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 25.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "OverallScore",
+    "score": 64.18,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q01",
+    "failed_metric": "OverallScore",
+    "score": 63.87,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q02",
+    "failed_metric": "OverallScore",
+    "score": 73.75,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "K2 MRR",
+    "score": 20.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q03",
+    "failed_metric": "OverallScore",
+    "score": 45.07,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q04",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q04",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q04",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q04",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 65.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q05",
+    "failed_metric": "OverallScore",
+    "score": 73.5,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q06",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q06",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q06",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q06",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q06",
+    "failed_metric": "OverallScore",
+    "score": 79.62,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 0.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q07",
+    "failed_metric": "OverallScore",
+    "score": 69.62,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q08",
+    "failed_metric": "OverallScore",
+    "score": 63.25,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q09",
+    "failed_metric": "OverallScore",
+    "score": 66.75,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 66.67,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 50.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q10",
+    "failed_metric": "OverallScore",
+    "score": 64.92,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q11",
+    "failed_metric": "OverallScore",
+    "score": 49.87,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "Expected source ranking is too low",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 52.5,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q12",
+    "failed_metric": "OverallScore",
+    "score": 52.5,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q13",
+    "failed_metric": "OverallScore",
+    "score": 61.87,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 56.67,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 0.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q14",
+    "failed_metric": "OverallScore",
+    "score": 70.37,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.08,
+    "reason": "Data Agent category prediction mismatch",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.22,
+    "reason": "Data Agent segment distribution differs from labels",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "I1 Lifecycle Segment Recognition",
+    "score": 50.0,
+    "reason": "Lifecycle tag missing or not recognized",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "K1 Recall@3",
+    "score": 75.0,
+    "reason": "Expected enterprise source not retrieved in top 3",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "S1 Strategy Golden Coverage",
+    "score": 40.0,
+    "reason": "Strategy misses required target/mechanism/content/channel/metric or keywords",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "S2 Knowledge Adoption",
+    "score": 25.0,
+    "reason": "Retrieved enterprise knowledge is not structurally attributed to strategy",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  },
+  {
+    "dataset_id": "dataset_03_retention_interest",
+    "question_id": "dataset_03_retention_interest_q15",
+    "failed_metric": "OverallScore",
+    "score": 67.56,
+    "reason": "End-to-end score below release threshold",
+    "suggestion": "Inspect the corresponding persisted artifact; do not relax the evaluator threshold."
+  }
+]

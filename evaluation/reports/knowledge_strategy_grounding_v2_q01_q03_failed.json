@@ -1,0 +1,18 @@
+[
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "K1 Recall@3为50.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 75.0,
+    "reason": "S1 Strategy Golden Rule Coverage为75.00，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  }
+]

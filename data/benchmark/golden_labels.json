@@ -1,0 +1,1517 @@
+[
+  {
+    "question_id": "dataset_01_general_q01",
+    "dataset_id": "dataset_01_general",
+    "question": "如何提升综合消费基准中年轻成长用户的首次转化和持续参与？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "低门槛",
+      "持续参与"
+    ],
+    "forbidden_keywords": [
+      "保证收益",
+      "稳赚不赔"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "product/bi_bi_zan.md"
+    ],
+    "evidence_rules": [
+      "引用年轻用户年龄、频次或客单价证据",
+      "策略与低门槛产品机制对应"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保证收益",
+      "稳赚不赔"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q02",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "新品",
+      "兴趣匹配",
+      "低门槛"
+    ],
+    "forbidden_keywords": [
+      "全量用户无差别触达",
+      "虚构转化率"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "使用品类偏好和活跃度筛选人群",
+      "说明试投放与验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全量用户无差别触达",
+      "虚构转化率"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q03",
+    "dataset_id": "dataset_01_general",
+    "question": "如何在综合消费基准中识别并运营年轻、非一线城市的潜力用户？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "城市",
+      "信任",
+      "分层运营"
+    ],
+    "forbidden_keywords": [
+      "地域歧视",
+      "推断职业"
+    ],
+    "expected_knowledge_sources": [
+      "brand/brand_profile.md",
+      "marketing_case/case_001.md"
+    ],
+    "evidence_rules": [
+      "同时使用年龄、城市和消费活跃证据",
+      "不得把城市直接等同于收入"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "地域歧视",
+      "推断职业"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q04",
+    "dataset_id": "dataset_01_general",
+    "question": "如何提升综合消费基准中高价值用户的复购并避免过度补贴？",
+    "expected_segments": [
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "高价值用户",
+      "复购",
+      "权益",
+      "补贴控制"
+    ],
+    "forbidden_keywords": [
+      "大额无差别优惠",
+      "虚构ROI"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用总消费、客单价和购买频次",
+      "权益必须与用户价值相匹配"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "大额无差别优惠",
+      "虚构ROI"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q05",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准中哪些用户适合会员升级运营，如何设置触发条件？",
+    "expected_segments": [
+      "high_value_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "会员",
+      "频次",
+      "客单价",
+      "触发条件"
+    ],
+    "forbidden_keywords": [
+      "自动承诺升级",
+      "未提供的会员成本"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_004.md"
+    ],
+    "evidence_rules": [
+      "给出可由数据字段验证的会员筛选规则",
+      "区分高价值和兴趣专一用户"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "自动承诺升级",
+      "未提供的会员成本"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q06",
+    "dataset_id": "dataset_01_general",
+    "question": "如何提升综合消费基准中价格敏感用户的复购而不形成优惠依赖？",
+    "expected_segments": [
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "优惠券",
+      "价格敏感",
+      "复购",
+      "分阶段"
+    ],
+    "forbidden_keywords": [
+      "永久低价",
+      "无限补贴"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用优惠券使用和平均客单价",
+      "包含优惠退出或递减机制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "永久低价",
+      "无限补贴"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q07",
+    "dataset_id": "dataset_01_general",
+    "question": "如何召回综合消费基准中的长期未购用户，并控制打扰风险？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "长期未购",
+      "召回",
+      "分层触达",
+      "频控"
+    ],
+    "forbidden_keywords": [
+      "真实流失用户",
+      "高频轰炸"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "明确该人群是场景增强标签",
+      "使用最近购买天数作为召回证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "真实流失用户",
+      "高频轰炸"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q08",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准中哪些长期未购用户值得优先召回？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史价值",
+      "最近购买天数",
+      "召回优先级"
+    ],
+    "forbidden_keywords": [
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "综合历史消费和最近购买天数排序",
+      "不能只按单一字段下结论"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q09",
+    "dataset_id": "dataset_01_general",
+    "question": "如何用历史品类偏好召回综合消费基准中的长期未购用户？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史偏好",
+      "个性化召回",
+      "品类"
+    ],
+    "forbidden_keywords": [
+      "无关品类推荐",
+      "敏感属性推断"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "召回商品必须匹配category_ground_truth",
+      "提出小流量验证方案"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "无关品类推荐",
+      "敏感属性推断"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q10",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准中哪些用户适合618活动，权益应如何分层？",
+    "expected_segments": [
+      "high_value_user",
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "618",
+      "分层权益",
+      "高价值",
+      "价格敏感"
+    ],
+    "forbidden_keywords": [
+      "全员同券",
+      "虚构活动预算"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "至少区分三类人群的权益差异",
+      "给出活动效果验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全员同券",
+      "虚构活动预算"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q11",
+    "dataset_id": "dataset_01_general",
+    "question": "如何为综合消费基准设计兼顾年轻用户与家庭用户的春节活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "春节",
+      "年轻用户",
+      "家庭场景",
+      "攒钱"
+    ],
+    "forbidden_keywords": [
+      "承诺固定收益",
+      "照搬案例数据"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_003.md",
+      "product/xiao_zhu_zan_qian_guan.md"
+    ],
+    "evidence_rules": [
+      "说明案例机制如何迁移而非直接复制",
+      "策略需连接具体用户证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "承诺固定收益",
+      "照搬案例数据"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q12",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准适合怎样的年轻化周年节点活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻化",
+      "节点",
+      "仪式感",
+      "社交传播"
+    ],
+    "forbidden_keywords": [
+      "虚构品牌历史",
+      "夸大传播效果"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_002.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "引用可复用的节点机制",
+      "包含明确的实验或传播指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "虚构品牌历史",
+      "夸大传播效果"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q13",
+    "dataset_id": "dataset_01_general",
+    "question": "综合消费基准中哪些用户适合电子产品新品推荐？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "电子产品偏好用户"
+    ],
+    "must_include_keywords": [
+      "电子产品",
+      "品类偏好",
+      "年轻用户"
+    ],
+    "forbidden_keywords": [
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "使用真实主消费品类和年龄证据",
+      "区分偏好证据与品牌猜测"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q14",
+    "dataset_id": "dataset_01_general",
+    "question": "如何为综合消费基准中的美妆或家居兴趣用户做关联推荐？",
+    "expected_segments": [
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "美妆偏好用户",
+      "家居偏好用户"
+    ],
+    "must_include_keywords": [
+      "品类兴趣",
+      "关联推荐",
+      "客单价"
+    ],
+    "forbidden_keywords": [
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "根据category_ground_truth选择目标用户",
+      "不得使用性别刻板印象"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ]
+  },
+  {
+    "question_id": "dataset_01_general_q15",
+    "dataset_id": "dataset_01_general",
+    "question": "基于综合消费基准的消费行为，哪些用户适合推荐低门槛攒钱产品？",
+    "expected_segments": [
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "低门槛",
+      "笔笔攒",
+      "目标储蓄",
+      "消费行为"
+    ],
+    "forbidden_keywords": [
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "product/xiao_zhu_zan_qian_guan.md",
+      "product/yu_e_bao.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "将产品机制与消费频次或客单价对应",
+      "说明金融营销限制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q01",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何提升年轻增长与促销基准中年轻成长用户的首次转化和持续参与？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "低门槛",
+      "持续参与"
+    ],
+    "forbidden_keywords": [
+      "保证收益",
+      "稳赚不赔"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "product/bi_bi_zan.md"
+    ],
+    "evidence_rules": [
+      "引用年轻用户年龄、频次或客单价证据",
+      "策略与低门槛产品机制对应"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保证收益",
+      "稳赚不赔"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q02",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "新品",
+      "兴趣匹配",
+      "低门槛"
+    ],
+    "forbidden_keywords": [
+      "全量用户无差别触达",
+      "虚构转化率"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "使用品类偏好和活跃度筛选人群",
+      "说明试投放与验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全量用户无差别触达",
+      "虚构转化率"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q03",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何在年轻增长与促销基准中识别并运营年轻、非一线城市的潜力用户？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "城市",
+      "信任",
+      "分层运营"
+    ],
+    "forbidden_keywords": [
+      "地域歧视",
+      "推断职业"
+    ],
+    "expected_knowledge_sources": [
+      "brand/brand_profile.md",
+      "marketing_case/case_001.md"
+    ],
+    "evidence_rules": [
+      "同时使用年龄、城市和消费活跃证据",
+      "不得把城市直接等同于收入"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "地域歧视",
+      "推断职业"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q04",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何提升年轻增长与促销基准中高价值用户的复购并避免过度补贴？",
+    "expected_segments": [
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "高价值用户",
+      "复购",
+      "权益",
+      "补贴控制"
+    ],
+    "forbidden_keywords": [
+      "大额无差别优惠",
+      "虚构ROI"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用总消费、客单价和购买频次",
+      "权益必须与用户价值相匹配"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "大额无差别优惠",
+      "虚构ROI"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q05",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准中哪些用户适合会员升级运营，如何设置触发条件？",
+    "expected_segments": [
+      "high_value_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "会员",
+      "频次",
+      "客单价",
+      "触发条件"
+    ],
+    "forbidden_keywords": [
+      "自动承诺升级",
+      "未提供的会员成本"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_004.md"
+    ],
+    "evidence_rules": [
+      "给出可由数据字段验证的会员筛选规则",
+      "区分高价值和兴趣专一用户"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "自动承诺升级",
+      "未提供的会员成本"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q06",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何提升年轻增长与促销基准中价格敏感用户的复购而不形成优惠依赖？",
+    "expected_segments": [
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "优惠券",
+      "价格敏感",
+      "复购",
+      "分阶段"
+    ],
+    "forbidden_keywords": [
+      "永久低价",
+      "无限补贴"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用优惠券使用和平均客单价",
+      "包含优惠退出或递减机制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "永久低价",
+      "无限补贴"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q07",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何召回年轻增长与促销基准中的长期未购用户，并控制打扰风险？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "长期未购",
+      "召回",
+      "分层触达",
+      "频控"
+    ],
+    "forbidden_keywords": [
+      "真实流失用户",
+      "高频轰炸"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "明确该人群是场景增强标签",
+      "使用最近购买天数作为召回证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "真实流失用户",
+      "高频轰炸"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q08",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准中哪些长期未购用户值得优先召回？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史价值",
+      "最近购买天数",
+      "召回优先级"
+    ],
+    "forbidden_keywords": [
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "综合历史消费和最近购买天数排序",
+      "不能只按单一字段下结论"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q09",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何用历史品类偏好召回年轻增长与促销基准中的长期未购用户？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史偏好",
+      "个性化召回",
+      "品类"
+    ],
+    "forbidden_keywords": [
+      "无关品类推荐",
+      "敏感属性推断"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "召回商品必须匹配category_ground_truth",
+      "提出小流量验证方案"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "无关品类推荐",
+      "敏感属性推断"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q10",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准中哪些用户适合618活动，权益应如何分层？",
+    "expected_segments": [
+      "high_value_user",
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "618",
+      "分层权益",
+      "高价值",
+      "价格敏感"
+    ],
+    "forbidden_keywords": [
+      "全员同券",
+      "虚构活动预算"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "至少区分三类人群的权益差异",
+      "给出活动效果验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全员同券",
+      "虚构活动预算"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q11",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何为年轻增长与促销基准设计兼顾年轻用户与家庭用户的春节活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "春节",
+      "年轻用户",
+      "家庭场景",
+      "攒钱"
+    ],
+    "forbidden_keywords": [
+      "承诺固定收益",
+      "照搬案例数据"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_003.md",
+      "product/xiao_zhu_zan_qian_guan.md"
+    ],
+    "evidence_rules": [
+      "说明案例机制如何迁移而非直接复制",
+      "策略需连接具体用户证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "承诺固定收益",
+      "照搬案例数据"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q12",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准适合怎样的年轻化周年节点活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻化",
+      "节点",
+      "仪式感",
+      "社交传播"
+    ],
+    "forbidden_keywords": [
+      "虚构品牌历史",
+      "夸大传播效果"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_002.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "引用可复用的节点机制",
+      "包含明确的实验或传播指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "虚构品牌历史",
+      "夸大传播效果"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q13",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "年轻增长与促销基准中哪些用户适合电子产品新品推荐？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "电子产品偏好用户"
+    ],
+    "must_include_keywords": [
+      "电子产品",
+      "品类偏好",
+      "年轻用户"
+    ],
+    "forbidden_keywords": [
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "使用真实主消费品类和年龄证据",
+      "区分偏好证据与品牌猜测"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q14",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "如何为年轻增长与促销基准中的美妆或家居兴趣用户做关联推荐？",
+    "expected_segments": [
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "美妆偏好用户",
+      "家居偏好用户"
+    ],
+    "must_include_keywords": [
+      "品类兴趣",
+      "关联推荐",
+      "客单价"
+    ],
+    "forbidden_keywords": [
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "根据category_ground_truth选择目标用户",
+      "不得使用性别刻板印象"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ]
+  },
+  {
+    "question_id": "dataset_02_growth_campaign_q15",
+    "dataset_id": "dataset_02_growth_campaign",
+    "question": "基于年轻增长与促销基准的消费行为，哪些用户适合推荐低门槛攒钱产品？",
+    "expected_segments": [
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "低门槛",
+      "笔笔攒",
+      "目标储蓄",
+      "消费行为"
+    ],
+    "forbidden_keywords": [
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "product/xiao_zhu_zan_qian_guan.md",
+      "product/yu_e_bao.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "将产品机制与消费频次或客单价对应",
+      "说明金融营销限制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q01",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何提升留存与品类兴趣基准中年轻成长用户的首次转化和持续参与？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "低门槛",
+      "持续参与"
+    ],
+    "forbidden_keywords": [
+      "保证收益",
+      "稳赚不赔"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "product/bi_bi_zan.md"
+    ],
+    "evidence_rules": [
+      "引用年轻用户年龄、频次或客单价证据",
+      "策略与低门槛产品机制对应"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保证收益",
+      "稳赚不赔"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q02",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准中哪些用户适合新品冷启动，应该如何降低尝试门槛？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "新品",
+      "兴趣匹配",
+      "低门槛"
+    ],
+    "forbidden_keywords": [
+      "全量用户无差别触达",
+      "虚构转化率"
+    ],
+    "expected_knowledge_sources": [
+      "user_growth/young_user_growth.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "使用品类偏好和活跃度筛选人群",
+      "说明试投放与验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全量用户无差别触达",
+      "虚构转化率"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q03",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何在留存与品类兴趣基准中识别并运营年轻、非一线城市的潜力用户？",
+    "expected_segments": [
+      "young_growth_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻用户",
+      "城市",
+      "信任",
+      "分层运营"
+    ],
+    "forbidden_keywords": [
+      "地域歧视",
+      "推断职业"
+    ],
+    "expected_knowledge_sources": [
+      "brand/brand_profile.md",
+      "marketing_case/case_001.md"
+    ],
+    "evidence_rules": [
+      "同时使用年龄、城市和消费活跃证据",
+      "不得把城市直接等同于收入"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "地域歧视",
+      "推断职业"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q04",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何提升留存与品类兴趣基准中高价值用户的复购并避免过度补贴？",
+    "expected_segments": [
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "高价值用户",
+      "复购",
+      "权益",
+      "补贴控制"
+    ],
+    "forbidden_keywords": [
+      "大额无差别优惠",
+      "虚构ROI"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用总消费、客单价和购买频次",
+      "权益必须与用户价值相匹配"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "大额无差别优惠",
+      "虚构ROI"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q05",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准中哪些用户适合会员升级运营，如何设置触发条件？",
+    "expected_segments": [
+      "high_value_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "会员",
+      "频次",
+      "客单价",
+      "触发条件"
+    ],
+    "forbidden_keywords": [
+      "自动承诺升级",
+      "未提供的会员成本"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_004.md"
+    ],
+    "evidence_rules": [
+      "给出可由数据字段验证的会员筛选规则",
+      "区分高价值和兴趣专一用户"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "自动承诺升级",
+      "未提供的会员成本"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q06",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何提升留存与品类兴趣基准中价格敏感用户的复购而不形成优惠依赖？",
+    "expected_segments": [
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "优惠券",
+      "价格敏感",
+      "复购",
+      "分阶段"
+    ],
+    "forbidden_keywords": [
+      "永久低价",
+      "无限补贴"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "引用优惠券使用和平均客单价",
+      "包含优惠退出或递减机制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "永久低价",
+      "无限补贴"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q07",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何召回留存与品类兴趣基准中的长期未购用户，并控制打扰风险？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "长期未购",
+      "召回",
+      "分层触达",
+      "频控"
+    ],
+    "forbidden_keywords": [
+      "真实流失用户",
+      "高频轰炸"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "明确该人群是场景增强标签",
+      "使用最近购买天数作为召回证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "真实流失用户",
+      "高频轰炸"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q08",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准中哪些长期未购用户值得优先召回？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史价值",
+      "最近购买天数",
+      "召回优先级"
+    ],
+    "forbidden_keywords": [
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "综合历史消费和最近购买天数排序",
+      "不能只按单一字段下结论"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "所有沉默用户同一策略",
+      "保证召回成功"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q09",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何用历史品类偏好召回留存与品类兴趣基准中的长期未购用户？",
+    "expected_segments": [
+      "scenario_enhanced_churn_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "历史偏好",
+      "个性化召回",
+      "品类"
+    ],
+    "forbidden_keywords": [
+      "无关品类推荐",
+      "敏感属性推断"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_005.md"
+    ],
+    "evidence_rules": [
+      "召回商品必须匹配category_ground_truth",
+      "提出小流量验证方案"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "无关品类推荐",
+      "敏感属性推断"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q10",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准中哪些用户适合618活动，权益应如何分层？",
+    "expected_segments": [
+      "high_value_user",
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "618",
+      "分层权益",
+      "高价值",
+      "价格敏感"
+    ],
+    "forbidden_keywords": [
+      "全员同券",
+      "虚构活动预算"
+    ],
+    "expected_knowledge_sources": [
+      "operation_rule/marketing_rule.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "至少区分三类人群的权益差异",
+      "给出活动效果验证指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "全员同券",
+      "虚构活动预算"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q11",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何为留存与品类兴趣基准设计兼顾年轻用户与家庭用户的春节活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "high_value_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "春节",
+      "年轻用户",
+      "家庭场景",
+      "攒钱"
+    ],
+    "forbidden_keywords": [
+      "承诺固定收益",
+      "照搬案例数据"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_003.md",
+      "product/xiao_zhu_zan_qian_guan.md"
+    ],
+    "evidence_rules": [
+      "说明案例机制如何迁移而非直接复制",
+      "策略需连接具体用户证据"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "承诺固定收益",
+      "照搬案例数据"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q12",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准适合怎样的年轻化周年节点活动？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "年轻化",
+      "节点",
+      "仪式感",
+      "社交传播"
+    ],
+    "forbidden_keywords": [
+      "虚构品牌历史",
+      "夸大传播效果"
+    ],
+    "expected_knowledge_sources": [
+      "marketing_case/case_002.md",
+      "marketing_case/case_006.md"
+    ],
+    "evidence_rules": [
+      "引用可复用的节点机制",
+      "包含明确的实验或传播指标"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "虚构品牌历史",
+      "夸大传播效果"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q13",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "留存与品类兴趣基准中哪些用户适合电子产品新品推荐？",
+    "expected_segments": [
+      "young_growth_user",
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "电子产品偏好用户"
+    ],
+    "must_include_keywords": [
+      "电子产品",
+      "品类偏好",
+      "年轻用户"
+    ],
+    "forbidden_keywords": [
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "使用真实主消费品类和年龄证据",
+      "区分偏好证据与品牌猜测"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "向无偏好用户强推",
+      "虚构设备品牌偏好"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q14",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "如何为留存与品类兴趣基准中的美妆或家居兴趣用户做关联推荐？",
+    "expected_segments": [
+      "category_interest_user"
+    ],
+    "expected_category_ground_truth": [
+      "美妆偏好用户",
+      "家居偏好用户"
+    ],
+    "must_include_keywords": [
+      "品类兴趣",
+      "关联推荐",
+      "客单价"
+    ],
+    "forbidden_keywords": [
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "brand/brand_profile.md"
+    ],
+    "evidence_rules": [
+      "根据category_ground_truth选择目标用户",
+      "不得使用性别刻板印象"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "推断性别决定美妆需求",
+      "跨品类无依据推荐"
+    ]
+  },
+  {
+    "question_id": "dataset_03_retention_interest_q15",
+    "dataset_id": "dataset_03_retention_interest",
+    "question": "基于留存与品类兴趣基准的消费行为，哪些用户适合推荐低门槛攒钱产品？",
+    "expected_segments": [
+      "young_growth_user",
+      "price_sensitive_user"
+    ],
+    "expected_category_ground_truth": [],
+    "must_include_keywords": [
+      "低门槛",
+      "笔笔攒",
+      "目标储蓄",
+      "消费行为"
+    ],
+    "forbidden_keywords": [
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ],
+    "expected_knowledge_sources": [
+      "product/bi_bi_zan.md",
+      "product/xiao_zhu_zan_qian_guan.md",
+      "product/yu_e_bao.md",
+      "operation_rule/marketing_rule.md"
+    ],
+    "evidence_rules": [
+      "将产品机制与消费频次或客单价对应",
+      "说明金融营销限制"
+    ],
+    "risk_constraints": [
+      "不得虚构数据集中不存在的指标",
+      "不得推断敏感身份属性",
+      "保本承诺",
+      "固定高收益",
+      "高风险杠杆"
+    ]
+  }
+]

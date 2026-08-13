@@ -1,0 +1,26 @@
+{
+  "low_threshold_saving_mechanism": {
+    "canonical_concept": "低门槛储蓄机制",
+    "knowledge_aliases": ["自动小额储蓄", "自动储蓄", "自动存钱", "笔笔攒", "零钱积累", "小额投入", "培养储蓄习惯"],
+    "strategy_aliases": ["低门槛储蓄", "降低使用门槛", "降低参与门槛", "培养用户长期习惯", "培养使用习惯", "提升参与率", "长期留存机制"],
+    "related_strategy_fields": ["product_strategy", "content_strategy"]
+  },
+  "young_user_growth": {
+    "canonical_concept": "年轻用户增长",
+    "knowledge_aliases": ["年轻用户增长", "青年用户运营", "年轻用户培养", "用户成长体系"],
+    "strategy_aliases": ["年轻用户激活", "成长型用户运营", "低门槛体验设计", "用户成长路径"],
+    "related_strategy_fields": ["content_strategy", "channel"]
+  },
+  "user_reactivation": {
+    "canonical_concept": "用户召回",
+    "knowledge_aliases": ["沉默用户召回", "流失风险", "用户唤醒"],
+    "strategy_aliases": ["重新激活", "召回活动", "回流运营", "触达沉默用户"],
+    "related_strategy_fields": ["promotion_strategy", "channel"]
+  },
+  "brand_trust_building": {
+    "canonical_concept": "品牌信任建设",
+    "knowledge_aliases": ["品牌定位", "品牌价值", "品牌认知"],
+    "strategy_aliases": ["建立信任", "提升用户信任", "增强品牌心智", "提升用户认可"],
+    "related_strategy_fields": ["content_strategy"]
+  }
+}

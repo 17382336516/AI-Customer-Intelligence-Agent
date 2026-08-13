@@ -1,0 +1,18 @@
+{
+  "evaluation_run_metadata": {"evaluation_version": "v6", "benchmark_version": "v1", "knowledge_base_version": "enterprise_rag_v3", "prompt_version": "1.0", "model_mode": "deterministic_fallback", "question_count": 45},
+  "metrics": {
+    "data": {"d1": 91.11, "d2": 98.83, "data_score": 93.43},
+    "insight": {"i1": 100.0, "i2": 100.0, "insight_score": 100.0},
+    "knowledge": {"k1_recall_at_3": 61.67, "k2_mrr": 73.33, "knowledge_score": 65.17},
+    "strategy": {"s1_golden_coverage": 72.15, "s2_knowledge_adoption": 68.33, "s3_risk_violation": 0.0, "strategy_score": 75.37},
+    "overall_score": 83.10,
+    "e2e_pass_count": 7,
+    "e2e_pass_rate": 15.56
+  },
+  "dataset_summaries": {
+    "dataset_01_general": {"questions": 15, "average_overall_score": 83.75, "e2e_pass_count": 2},
+    "dataset_02_growth_campaign": {"questions": 15, "average_overall_score": 83.79, "e2e_pass_count": 2},
+    "dataset_03_retention_interest": {"questions": 15, "average_overall_score": 81.76, "e2e_pass_count": 3}
+  },
+  "source_result_files": ["v6_dataset_01_results.json", "v6_dataset_02_results.json", "v6_dataset_03_results.json"]
+}

@@ -21,14 +21,24 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   return response.json() as Promise<T>
 }
 
-export function uploadDataset(file: File): Promise<Dataset> {
+export function uploadDataset(file: File, displayName = ''): Promise<Dataset> {
   const form = new FormData()
   form.append('file', file)
+  if (displayName) form.append('display_name', displayName)
   return request('/api/v1/datasets/upload', { method: 'POST', body: form })
 }
 
-export function createDemoDataset(): Promise<Dataset> {
-  return request('/api/v1/demo/dataset', { method: 'POST' })
+export function createDemoDataset(displayName = ''): Promise<Dataset> {
+  const form = new FormData()
+  if (displayName) form.append('display_name', displayName)
+  return request('/api/v1/demo/dataset', { method: 'POST', body: form })
+}
+
+/** 修改数据集在左侧的自定义显示名称。 */
+export function renameDataset(datasetId: string, displayName = ''): Promise<Dataset> {
+  const form = new FormData()
+  form.append('display_name', displayName)
+  return request(`/api/v1/datasets/${datasetId}/display-name`, { method: 'PATCH', body: form })
 }
 
 export function startAnalysis(payload: {

@@ -1,0 +1,11 @@
+{
+  "evaluation_version": "v6",
+  "benchmark_version": "v1",
+  "dataset_version": "v1",
+  "knowledge_base_version": "enterprise_rag_v3",
+  "prompt_version": "1.0",
+  "model_version": "strategy_planning_v4",
+  "model_mode": "deterministic_fallback",
+  "question_count": 45,
+  "knowledge_documents_loaded": 14
+}

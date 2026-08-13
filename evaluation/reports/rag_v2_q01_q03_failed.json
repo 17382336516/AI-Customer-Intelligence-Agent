@@ -1,0 +1,90 @@
+[
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "D1 Consumption Preference Accuracy为76.60，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "D2 Distribution Similarity为76.75，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q01",
+    "failed_metric": "I1 Segment Recognition Rate",
+    "score": 0.0,
+    "reason": "I1 Segment Recognition Rate为0.00，低于通过阈值80.00。",
+    "suggestion": "检查生命周期标签输出和segment_alias_mapping归一化结果。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "D1 Consumption Preference Accuracy为76.60，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "D2 Distribution Similarity为76.75，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q02",
+    "failed_metric": "I1 Segment Recognition Rate",
+    "score": 50.0,
+    "reason": "I1 Segment Recognition Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查生命周期标签输出和segment_alias_mapping归一化结果。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.6,
+    "reason": "D1 Consumption Preference Accuracy为76.60，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.75,
+    "reason": "D2 Distribution Similarity为76.75，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "I1 Segment Recognition Rate",
+    "score": 0.0,
+    "reason": "I1 Segment Recognition Rate为0.00，低于通过阈值80.00。",
+    "suggestion": "检查生命周期标签输出和segment_alias_mapping归一化结果。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 52.5,
+    "reason": "S1 Strategy Golden Rule Coverage为52.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "OverallScore",
+    "score": 75.35,
+    "reason": "OverallScore为75.35，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  }
+]

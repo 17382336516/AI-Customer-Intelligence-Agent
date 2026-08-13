@@ -1,0 +1,714 @@
+[
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q01",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q02",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "K1 Recall@3为50.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q03",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 62.5,
+    "reason": "S1 Strategy Golden Rule Coverage为62.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 77.5,
+    "reason": "S1 Strategy Golden Rule Coverage为77.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q04",
+    "failed_metric": "OverallScore",
+    "score": 71.61,
+    "reason": "OverallScore为71.61，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 65.0,
+    "reason": "S1 Strategy Golden Rule Coverage为65.00，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q05",
+    "failed_metric": "OverallScore",
+    "score": 64.61,
+    "reason": "OverallScore为64.61，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 75.0,
+    "reason": "S1 Strategy Golden Rule Coverage为75.00，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q06",
+    "failed_metric": "OverallScore",
+    "score": 71.09,
+    "reason": "OverallScore为71.09，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 77.5,
+    "reason": "S1 Strategy Golden Rule Coverage为77.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q07",
+    "failed_metric": "OverallScore",
+    "score": 71.61,
+    "reason": "OverallScore为71.61，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 40.0,
+    "reason": "S1 Strategy Golden Rule Coverage为40.00，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q08",
+    "failed_metric": "OverallScore",
+    "score": 59.36,
+    "reason": "OverallScore为59.36，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 56.67,
+    "reason": "S1 Strategy Golden Rule Coverage为56.67，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q09",
+    "failed_metric": "OverallScore",
+    "score": 62.86,
+    "reason": "OverallScore为62.86，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "K2 MRR",
+    "score": 16.67,
+    "reason": "K2 MRR为16.67，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 71.67,
+    "reason": "S1 Strategy Golden Rule Coverage为71.67，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q10",
+    "failed_metric": "OverallScore",
+    "score": 66.01,
+    "reason": "OverallScore为66.01，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "K1 Recall@3",
+    "score": 0.0,
+    "reason": "K1 Recall@3为0.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "K2 MRR",
+    "score": 20.0,
+    "reason": "K2 MRR为20.00，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 57.5,
+    "reason": "S1 Strategy Golden Rule Coverage为57.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 0.0,
+    "reason": "S2 Knowledge Adoption Rate为0.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q11",
+    "failed_metric": "OverallScore",
+    "score": 58.86,
+    "reason": "OverallScore为58.86，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "K1 Recall@3为50.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "K2 MRR",
+    "score": 33.33,
+    "reason": "K2 MRR为33.33，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 57.5,
+    "reason": "S1 Strategy Golden Rule Coverage为57.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 0.0,
+    "reason": "S2 Knowledge Adoption Rate为0.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q12",
+    "failed_metric": "OverallScore",
+    "score": 66.66,
+    "reason": "OverallScore为66.66，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "K1 Recall@3为50.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "K2 MRR为50.00，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 61.67,
+    "reason": "S1 Strategy Golden Rule Coverage为61.67，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q13",
+    "failed_metric": "OverallScore",
+    "score": 72.91,
+    "reason": "OverallScore为72.91，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "K1 Recall@3",
+    "score": 50.0,
+    "reason": "K1 Recall@3为50.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "K2 MRR为50.00，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 56.67,
+    "reason": "S1 Strategy Golden Rule Coverage为56.67，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 50.0,
+    "reason": "S2 Knowledge Adoption Rate为50.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q14",
+    "failed_metric": "OverallScore",
+    "score": 71.86,
+    "reason": "OverallScore为71.86，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "D1 Consumption Preference Accuracy",
+    "score": 76.65,
+    "reason": "D1 Consumption Preference Accuracy为76.65，低于通过阈值80.00。",
+    "suggestion": "检查品类归一化、用户级预测和category_ground_truth映射。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "D2 Distribution Similarity",
+    "score": 76.77,
+    "reason": "D2 Distribution Similarity为76.77，低于通过阈值85.00。",
+    "suggestion": "检查分群占比与Benchmark标签分布差异。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "K1 Recall@3",
+    "score": 25.0,
+    "reason": "K1 Recall@3为25.00，低于通过阈值80.00。",
+    "suggestion": "检查查询表达、知识文档路径和Golden知识源配置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "K2 MRR",
+    "score": 50.0,
+    "reason": "K2 MRR为50.00，低于通过阈值60.00。",
+    "suggestion": "检查正确知识文档是否出现在更靠前的检索位置。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 62.5,
+    "reason": "S1 Strategy Golden Rule Coverage为62.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "S2 Knowledge Adoption Rate",
+    "score": 75.0,
+    "reason": "S2 Knowledge Adoption Rate为75.00，低于通过阈值80.00。",
+    "suggestion": "检查knowledge_applications是否包含Golden知识源、采用概念和策略字段。"
+  },
+  {
+    "dataset_id": "dataset_02_growth_campaign",
+    "question_id": "dataset_02_growth_campaign_q15",
+    "failed_metric": "OverallScore",
+    "score": 71.78,
+    "reason": "OverallScore为71.78，低于通过阈值80.00。",
+    "suggestion": "按分项失败指标定位短板后重新验证完整链路。"
+  }
+]

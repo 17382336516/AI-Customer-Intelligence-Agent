@@ -92,6 +92,7 @@ class DatasetPreview(BaseModel):
 class DatasetResponse(BaseModel):
     id: str
     name: str
+    display_name: str = ""
     file_type: str
     row_count: int
     quality: QualityReport
@@ -239,6 +240,32 @@ class EvaluationResult(BaseModel):
     warnings: list[str]
 
 
+class DataAgentEvaluationArtifacts(BaseModel):
+    user_predictions: list[dict[str, Any]] = []
+    segment_distribution: list[dict[str, Any]] = []
+
+
+class InsightAgentEvaluationArtifacts(BaseModel):
+    insight_records: list[dict[str, Any]] = []
+
+
+class KnowledgeAgentEvaluationArtifacts(BaseModel):
+    retrieval_results: list[dict[str, Any]] = []
+
+
+class StrategyAgentEvaluationArtifacts(BaseModel):
+    strategy_records: list[dict[str, Any]] = []
+    human_review_template: dict[str, Any] = {}
+
+
+class EvaluationArtifacts(BaseModel):
+    schema_version: str = "1.0"
+    data_agent: DataAgentEvaluationArtifacts = DataAgentEvaluationArtifacts()
+    insight_agent: InsightAgentEvaluationArtifacts = InsightAgentEvaluationArtifacts()
+    knowledge_agent: KnowledgeAgentEvaluationArtifacts = KnowledgeAgentEvaluationArtifacts()
+    strategy_agent: StrategyAgentEvaluationArtifacts = StrategyAgentEvaluationArtifacts()
+
+
 class AnalysisResult(BaseModel):
     route: Literal["quality_only", "segment_only", "full_strategy"]
     intent: str = ""
@@ -261,6 +288,7 @@ class AnalysisResult(BaseModel):
     agent_trace: list[dict[str, Any]] = []
     model_mode: Literal["deterministic", "llm_enhanced"]
     warnings: list[str] = []
+    evaluation_artifacts: EvaluationArtifacts = EvaluationArtifacts()
 
 
 class AnalysisResponse(BaseModel):

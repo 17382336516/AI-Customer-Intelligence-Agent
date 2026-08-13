@@ -20,6 +20,7 @@ class WorkflowState(TypedDict, total=False):
     session_id: str
     conversation_id: str
     session_context: dict[str, Any]
+    cached_analysis: dict[str, Any]
     route: str
     intent: str
     agents: list[str]
@@ -38,6 +39,12 @@ class WorkflowState(TypedDict, total=False):
     insights: list[dict[str, Any]]
     strategy_cards: list[dict[str, Any]]
     knowledge_support: dict[str, Any]
+    enterprise_context: str
+    enterprise_sources: list[str]
+    data_agent_artifacts: dict[str, Any]
+    insight_agent_artifacts: dict[str, Any]
+    knowledge_agent_artifacts: dict[str, Any]
+    strategy_agent_artifacts: dict[str, Any]
     agent_trace: list[dict[str, Any]]
     evaluation: dict[str, Any]
     model_mode: str
@@ -88,7 +95,14 @@ class CustomerIntelligenceWorkflow:
     def _node_data(self, state: WorkflowState) -> dict[str, Any]:
         # 数据资产复用：若已注入数据集分析缓存，直接读取既有分群/趋势，跳过清洗与重算。
         cached = state.get("cached_analysis")
-        if cached and cached.get("segments"):
+        cached_evaluation = cached.get("evaluation_artifacts", {}) if cached else {}
+        cached_data_artifacts = cached_evaluation.get("data_agent", {})
+        if (
+            state.get("route") != "quality_only"
+            and cached
+            and cached.get("segments")
+            and cached_data_artifacts.get("user_predictions")
+        ):
             trace = self._trace(
                 state, "data_agent", "读取数据集分析缓存（复用既有分群与消费趋势）",
                 f"segments={len(cached.get('segments', []))}; "
@@ -96,10 +110,12 @@ class CustomerIntelligenceWorkflow:
             )
             return {
                 "segments": cached.get("segments", []),
+                "quality": cached.get("quality", {}),
                 "cluster_quality": cached.get("cluster_quality", {}),
                 "segment_method": cached.get("segment_method", "category_preference"),
                 "income_profile": cached.get("income_profile", {}),
                 "overall_consumption_insight": cached.get("overall_consumption_insight", {}),
+                "data_agent_artifacts": cached_data_artifacts,
                 **trace,
             }
         result = self.data_agent.run(state)
@@ -111,14 +127,7 @@ class CustomerIntelligenceWorkflow:
         return {**result, **trace}
 
     def _node_insight(self, state: WorkflowState) -> dict[str, Any]:
-        # 数据资产复用：直接复用缓存中的用户洞察，不再重跑 Insight Agent。
-        cached = state.get("cached_analysis")
-        if cached and cached.get("insights"):
-            trace = self._trace(
-                state, "insight_agent", "读取数据集分析缓存（复用既有用户洞察）",
-                f"insights={len(cached.get('insights', []))}",
-            )
-            return {"insights": cached.get("insights", []), **trace}
+        # Insight 与业务问题相关，每次分析都重新执行；仅 Data Agent 资产允许复用。
         result = self.insight_agent.run(state)
         trace = self._trace(
             state, "insight_agent", "生成客户洞察",
@@ -252,6 +261,8 @@ class CustomerIntelligenceWorkflow:
             "insights": state.get("insights", []),
             "strategy_cards": state.get("strategy_cards", []),
             "knowledge_support": state.get("knowledge_support", {}),
+            "enterprise_context": state.get("enterprise_context", ""),
+            "enterprise_sources": state.get("enterprise_sources", []),
             "evaluation": state["evaluation"],
             "cluster_quality": state.get("cluster_quality", {}),
             "segment_method": state.get("segment_method", "category_preference"),
@@ -264,4 +275,23 @@ class CustomerIntelligenceWorkflow:
             "agent_trace": state.get("agent_trace", []),
             "model_mode": state.get("model_mode", "deterministic"),
             "warnings": state.get("warnings", []),
+            "evaluation_artifacts": {
+                "schema_version": "1.0",
+                "data_agent": state.get(
+                    "data_agent_artifacts",
+                    {"user_predictions": [], "segment_distribution": []},
+                ),
+                "insight_agent": state.get(
+                    "insight_agent_artifacts",
+                    {"insight_records": []},
+                ),
+                "knowledge_agent": state.get(
+                    "knowledge_agent_artifacts",
+                    {"retrieval_results": []},
+                ),
+                "strategy_agent": state.get(
+                    "strategy_agent_artifacts",
+                    {"strategy_records": []},
+                ),
+            },
         }

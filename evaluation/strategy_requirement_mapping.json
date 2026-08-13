@@ -1,0 +1,27 @@
+{
+  "young_user_growth": {
+    "required_keywords": ["年轻用户", "低门槛", "分层运营"],
+    "required_fields": ["product_strategy", "content_strategy", "promotion_strategy", "channel", "metrics"],
+    "required_knowledge_types": ["product", "user_growth", "marketing_case"]
+  },
+  "user_recall": {
+    "required_keywords": ["召回", "分层触达", "频控", "长期未购"],
+    "required_fields": ["content_strategy", "promotion_strategy", "channel", "metrics"],
+    "required_knowledge_types": ["marketing_case", "operation_rule", "user_growth"]
+  },
+  "retention": {
+    "required_keywords": ["复购", "权益", "会员", "频次"],
+    "required_fields": ["product_strategy", "promotion_strategy", "channel", "metrics"],
+    "required_knowledge_types": ["product", "marketing_case", "operation_rule"]
+  },
+  "activity_operation": {
+    "required_keywords": ["活动", "分层权益", "优惠券", "转化"],
+    "required_fields": ["content_strategy", "promotion_strategy", "channel", "metrics"],
+    "required_knowledge_types": ["marketing_case", "operation_rule", "brand"]
+  },
+  "product_recommendation": {
+    "required_keywords": ["品类偏好", "关联推荐", "客单价", "消费行为"],
+    "required_fields": ["product_strategy", "content_strategy", "channel", "metrics"],
+    "required_knowledge_types": ["product", "brand", "user_growth"]
+  }
+}

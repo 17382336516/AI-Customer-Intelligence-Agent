@@ -1,0 +1,10 @@
+[
+  {
+    "dataset_id": "dataset_01_general",
+    "question_id": "dataset_01_general_q03",
+    "failed_metric": "S1 Strategy Golden Rule Coverage",
+    "score": 62.5,
+    "reason": "S1 Strategy Golden Rule Coverage为62.50，低于通过阈值85.00。",
+    "suggestion": "检查目标人群、商品机制、内容、渠道、指标和必含关键词。"
+  }
+]

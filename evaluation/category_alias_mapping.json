@@ -1,0 +1,10 @@
+{
+  "electronics": ["electronics", "electronics.mobile", "electronic", "电子产品", "数码电子", "手机", "电子产品偏好用户"],
+  "apparel": ["apparel", "clothing", "服饰", "服装", "服饰偏好用户"],
+  "food": ["food", "食品", "食品偏好用户"],
+  "beauty": ["beauty", "美妆", "美妆偏好用户"],
+  "home": ["home", "家居", "家居偏好用户"],
+  "travel": ["travel", "旅游", "旅游偏好用户"],
+  "sports": ["sports", "运动", "运动偏好用户"],
+  "mother_baby": ["mother_baby", "母婴", "母婴偏好用户"]
+}

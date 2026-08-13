@@ -1,0 +1,955 @@
+{
+  "strategy_records": [
+    {
+      "target_segment": "young_growth_user",
+      "lifecycle_tags": [
+        "young_growth_user",
+        "high_value_user",
+        "price_sensitive_user"
+      ],
+      "marketing_goal": "提升数码电子品类转化与成交；提升复购与连带购买；提升客单价与高价值商品渗透",
+      "content_strategy": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。",
+      "product_strategy": "主推数码电子主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「数码电子商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；设计复购装与订阅式组合，锁定高频节奏；结合企业产品机制：自动小额储蓄降低使用门槛",
+      "promotion_strategy": "高客单专属券；满额赠礼；采用套装/满赠而非单纯降价，保护高客单人群的价格心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播",
+      "channel": "APP push、站内信、短信首发提醒、品类专题页",
+      "metrics": [
+        "点击率",
+        "加购率",
+        "转化率",
+        "客单价提升",
+        "连带购买率"
+      ],
+      "knowledge_plan": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "场景化运营培养储蓄习惯",
+          "purpose": "遵守运营规则",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "自动小额储蓄降低使用门槛",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "strategy_field": "content_strategy",
+          "expected_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "purpose": "支持用户增长运营",
+          "target_field": "content_strategy"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "knowledge_type": "marketing_case",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "节点化内容与社交传播",
+          "purpose": "提供营销案例依据",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "低门槛且保持资金流动性的储蓄",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "product\\xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "可视化目标储蓄与进度反馈",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        }
+      ],
+      "strategy_requirement": {
+        "business_goal": "retention",
+        "required_segments": [
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "price_sensitive_user",
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "scenario_enhanced_churn_user",
+          "young_growth_user"
+        ],
+        "required_strategy_fields": [
+          "product_strategy",
+          "promotion_strategy",
+          "channel",
+          "metrics"
+        ],
+        "must_include_concepts": [
+          "复购",
+          "权益",
+          "会员",
+          "频次"
+        ],
+        "required_knowledge_types": [
+          "product",
+          "marketing_case",
+          "operation_rule"
+        ]
+      },
+      "generated_strategy_text": "针对「高客单高频近期活跃数码电子消费人群」（约 42.5%，人均消费 ¥21258、人均 10.8 次），围绕数码电子设计数据驱动的定向权益。\n围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。\n主推数码电子主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「数码电子商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；设计复购装与订阅式组合，锁定高频节奏；结合企业产品机制：自动小额储蓄降低使用门槛\n高客单专属券；满额赠礼；采用套装/满赠而非单纯降价，保护高客单人群的价格心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播\nAPP push、站内信、短信首发提醒、品类专题页\n点击率、加购率、转化率、客单价提升、连带购买率",
+      "used_knowledge_sources": [
+        "operation_rule\\marketing_rule.md",
+        "product\\bi_bi_zan.md",
+        "user_growth\\young_user_growth.md",
+        "marketing_case\\case_002.md",
+        "product\\yu_e_bao.md"
+      ],
+      "knowledge_applications": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "applied_concept": "场景化运营培养储蓄习惯",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "applied_concept": "自动小额储蓄降低使用门槛",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推数码电子主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「数码电子商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；设计复购装与订阅式组合，锁定高频节奏；结合企业产品机制：自动小额储蓄降低使用门槛"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "applied_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "applied_concept": "节点化内容与社交传播",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "applied_concept": "低门槛且保持资金流动性的储蓄",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        }
+      ],
+      "strategy_knowledge_trace": [
+        {
+          "source": "operation_rule\\marketing_rule.md",
+          "concept": "场景化运营培养储蓄习惯",
+          "used_in": "content_strategy",
+          "evidence": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "source": "product\\bi_bi_zan.md",
+          "concept": "自动小额储蓄降低使用门槛",
+          "used_in": "product_strategy",
+          "evidence": "主推数码电子主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「数码电子商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；设计复购装与订阅式组合，锁定高频节奏；结合企业产品机制：自动小额储蓄降低使用门槛"
+        },
+        {
+          "source": "user_growth\\young_user_growth.md",
+          "concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "used_in": "content_strategy",
+          "evidence": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "source": "marketing_case\\case_002.md",
+          "concept": "节点化内容与社交传播",
+          "used_in": "content_strategy",
+          "evidence": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        },
+        {
+          "source": "product\\yu_e_bao.md",
+          "concept": "低门槛且保持资金流动性的储蓄",
+          "used_in": "content_strategy",
+          "evidence": "围绕数码电子的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。用进阶玩法与会员专属内容维持高频用户的深度参与。借近期活跃节点推送新品与场景化种草内容。围绕年轻成长用户、高价值用户、价格敏感用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。"
+        }
+      ],
+      "knowledge_evidence": [
+        {
+          "document_source": "operation_rule/marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "business_goal": "campaign_conversion",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy"
+          ],
+          "evidence_text": "# 营销运营规则（余额宝 / 年轻用户）\n\n## Source\n\n- 来源链接：\n  - 余额宝十周年营销复盘（数英网 2023-07-14）：https://www.digitaling.com/articles/952881.html\n  - 新京报青年消费趋势报告（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n- 发布时间：2023-07-14 / 2024-07-05\n- 资料类型"
+        },
+        {
+          "document_source": "product/bi_bi_zan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 笔笔攒\n\n## Source\n\n- 来源链接：百度百科·笔笔攒 https://baike.baidu.com/item/%E7%AC%94%E7%AC%94%E6%94%92/49804297 ；百度知道产品介绍 https://zhidao.baidu.com/question/949749531946750372.html\n- 发布时间：百科持续更新\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下针对年轻人的\"无痛攒钱\"子工具，将储蓄动作嵌入日常消费链"
+        },
+        {
+          "document_source": "user_growth/young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "business_goal": "young_user_growth",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "content_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 年轻用户增长\n\n## Source\n\n- 来源链接：\n  - 新京报·贝壳财经《青年消费趋势报告》（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n  - 澎湃新闻·2024 年轻人理财趋势（2024-12-20）：https://m.thepaper.cn/newsDetail_forward_29686885\n- 发布时间：2024-07-05 / 2024-12-20\n- 资料类型"
+        },
+        {
+          "document_source": "marketing_case/case_002.md",
+          "knowledge_type": "marketing_case",
+          "business_goal": "campaign_conversion",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "低门槛"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 案例 002：余额宝十周年「营销有温度，收益有稳度」\n\n## Source\n\n- 资料链接：数英网 https://www.digitaling.com/articles/952881.html\n- 发布时间：2023-07-14\n- 资料类型：case\n- 作者：营销之美（数英网专栏）\n\n## 背景\n\n2023 年 6 月 13 日为余额宝上线十周年，微博热搜 #余额宝上线第十年# 引发集体回忆。公开披露：累计用户超 8 亿，三线及以下城市用户占比约一半，人均持仓不到 "
+        },
+        {
+          "document_source": "product/yu_e_bao.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 余额宝（Yu'e Bao）\n\n## Source\n\n- 来源链接：百度百科·余额宝 https://baike.baidu.com/item/%E4%BD%99%E9%A2%9D%E5%AE%9D/5713207 ；数英网十周年复盘 https://www.digitaling.com/articles/952881.html\n- 发布时间：百科持续更新；十周年文章 2023-07-14\n- 资料类型：product\n\n## 产品定位\n\n互联网现金管理工具（货币基金接入）"
+        },
+        {
+          "document_source": "product/xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 小猪攒钱罐\n\n## Source\n\n- 来源链接：百度知道·小猪攒钱罐 https://zhidao.baidu.com/question/991838885334906899.html ；百度经验入口说明 https://jingyan.baidu.com/article/4b52d702feff5fbd5d774b26.html\n- 发布时间：百度经验 2023-10-19\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下的\"目标储蓄\"子工具，面向有具体攒"
+        }
+      ],
+      "strategy_verification": {
+        "knowledge_grounded": true,
+        "verified_sources": [
+          "operation_rule/marketing_rule.md",
+          "product/bi_bi_zan.md",
+          "user_growth/young_user_growth.md",
+          "marketing_case/case_002.md",
+          "product/yu_e_bao.md"
+        ],
+        "unsupported_claims": [],
+        "grounding_score": 1.0,
+        "matched_concepts": [
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "自动小额储蓄降低使用门槛",
+            "strategy_field": "product_strategy",
+            "match_type": "exact_or_alias"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          }
+        ],
+        "failed_concepts": [],
+        "explanation": "低门槛储蓄机制对应策略字段content_strategy中的低门槛；低门槛储蓄机制对应策略字段product_strategy中的自动小额储蓄降低使用门槛；低门槛储蓄机制对应策略字段content_strategy中的低门槛；低门槛储蓄机制对应策略字段content_strategy中的低门槛；低门槛储蓄机制对应策略字段content_strategy中的低门槛"
+      }
+    },
+    {
+      "target_segment": "price_sensitive_user",
+      "lifecycle_tags": [
+        "price_sensitive_user",
+        "young_growth_user",
+        "high_value_user"
+      ],
+      "marketing_goal": "提升旅行品类转化与成交；培育兴趣并提升转化",
+      "content_strategy": "围绕旅行的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、年轻成长用户、高价值用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。",
+      "product_strategy": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄",
+      "promotion_strategy": "满减红包；代金券；以旅行定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播",
+      "channel": "APP push、站内信、品类专题页",
+      "metrics": [
+        "点击率",
+        "加购率",
+        "转化率",
+        "客单价提升",
+        "连带购买率"
+      ],
+      "knowledge_plan": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "场景化运营培养储蓄习惯",
+          "purpose": "遵守运营规则",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "自动小额储蓄降低使用门槛",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "strategy_field": "content_strategy",
+          "expected_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "purpose": "支持用户增长运营",
+          "target_field": "content_strategy"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "knowledge_type": "marketing_case",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "节点化内容与社交传播",
+          "purpose": "提供营销案例依据",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "低门槛且保持资金流动性的储蓄",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "product\\xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "可视化目标储蓄与进度反馈",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        }
+      ],
+      "strategy_requirement": {
+        "business_goal": "retention",
+        "required_segments": [
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "price_sensitive_user",
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "scenario_enhanced_churn_user",
+          "young_growth_user"
+        ],
+        "required_strategy_fields": [
+          "product_strategy",
+          "promotion_strategy",
+          "channel",
+          "metrics"
+        ],
+        "must_include_concepts": [
+          "复购",
+          "权益",
+          "会员",
+          "频次"
+        ],
+        "required_knowledge_types": [
+          "product",
+          "marketing_case",
+          "operation_rule"
+        ]
+      },
+      "generated_strategy_text": "针对「旅行消费人群」（约 22.3%，人均消费 ¥7164、人均 6.5 次），围绕旅行设计数据驱动的定向权益。\n围绕旅行的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、年轻成长用户、高价值用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。\n主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄\n满减红包；代金券；以旅行定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播\nAPP push、站内信、品类专题页\n点击率、加购率、转化率、客单价提升、连带购买率",
+      "used_knowledge_sources": [
+        "operation_rule\\marketing_rule.md",
+        "product\\bi_bi_zan.md",
+        "user_growth\\young_user_growth.md",
+        "marketing_case\\case_002.md",
+        "product\\yu_e_bao.md"
+      ],
+      "knowledge_applications": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "applied_concept": "场景化运营培养储蓄习惯",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕旅行的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、年轻成长用户、高价值用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "applied_concept": "自动小额储蓄降低使用门槛",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "applied_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "applied_concept": "节点化内容与社交传播",
+          "strategy_field": "promotion_strategy",
+          "evidence_text": "满减红包；代金券；以旅行定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "applied_concept": "低门槛且保持资金流动性的储蓄",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        }
+      ],
+      "strategy_knowledge_trace": [
+        {
+          "source": "operation_rule\\marketing_rule.md",
+          "concept": "场景化运营培养储蓄习惯",
+          "used_in": "content_strategy",
+          "evidence": "围绕旅行的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、年轻成长用户、高价值用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。"
+        },
+        {
+          "source": "product\\bi_bi_zan.md",
+          "concept": "自动小额储蓄降低使用门槛",
+          "used_in": "product_strategy",
+          "evidence": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "source": "user_growth\\young_user_growth.md",
+          "concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "used_in": "product_strategy",
+          "evidence": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "source": "marketing_case\\case_002.md",
+          "concept": "节点化内容与社交传播",
+          "used_in": "promotion_strategy",
+          "evidence": "满减红包；代金券；以旅行定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播"
+        },
+        {
+          "source": "product\\yu_e_bao.md",
+          "concept": "低门槛且保持资金流动性的储蓄",
+          "used_in": "product_strategy",
+          "evidence": "主推旅行主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「旅行商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        }
+      ],
+      "knowledge_evidence": [
+        {
+          "document_source": "operation_rule/marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "business_goal": "campaign_conversion",
+          "target_segment": "price_sensitive_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy"
+          ],
+          "evidence_text": "# 营销运营规则（余额宝 / 年轻用户）\n\n## Source\n\n- 来源链接：\n  - 余额宝十周年营销复盘（数英网 2023-07-14）：https://www.digitaling.com/articles/952881.html\n  - 新京报青年消费趋势报告（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n- 发布时间：2023-07-14 / 2024-07-05\n- 资料类型"
+        },
+        {
+          "document_source": "product/bi_bi_zan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 笔笔攒\n\n## Source\n\n- 来源链接：百度百科·笔笔攒 https://baike.baidu.com/item/%E7%AC%94%E7%AC%94%E6%94%92/49804297 ；百度知道产品介绍 https://zhidao.baidu.com/question/949749531946750372.html\n- 发布时间：百科持续更新\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下针对年轻人的\"无痛攒钱\"子工具，将储蓄动作嵌入日常消费链"
+        },
+        {
+          "document_source": "user_growth/young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "business_goal": "young_user_growth",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "content_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 年轻用户增长\n\n## Source\n\n- 来源链接：\n  - 新京报·贝壳财经《青年消费趋势报告》（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n  - 澎湃新闻·2024 年轻人理财趋势（2024-12-20）：https://m.thepaper.cn/newsDetail_forward_29686885\n- 发布时间：2024-07-05 / 2024-12-20\n- 资料类型"
+        },
+        {
+          "document_source": "marketing_case/case_002.md",
+          "knowledge_type": "marketing_case",
+          "business_goal": "campaign_conversion",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "低门槛"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 案例 002：余额宝十周年「营销有温度，收益有稳度」\n\n## Source\n\n- 资料链接：数英网 https://www.digitaling.com/articles/952881.html\n- 发布时间：2023-07-14\n- 资料类型：case\n- 作者：营销之美（数英网专栏）\n\n## 背景\n\n2023 年 6 月 13 日为余额宝上线十周年，微博热搜 #余额宝上线第十年# 引发集体回忆。公开披露：累计用户超 8 亿，三线及以下城市用户占比约一半，人均持仓不到 "
+        },
+        {
+          "document_source": "product/yu_e_bao.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 余额宝（Yu'e Bao）\n\n## Source\n\n- 来源链接：百度百科·余额宝 https://baike.baidu.com/item/%E4%BD%99%E9%A2%9D%E5%AE%9D/5713207 ；数英网十周年复盘 https://www.digitaling.com/articles/952881.html\n- 发布时间：百科持续更新；十周年文章 2023-07-14\n- 资料类型：product\n\n## 产品定位\n\n互联网现金管理工具（货币基金接入）"
+        },
+        {
+          "document_source": "product/xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 小猪攒钱罐\n\n## Source\n\n- 来源链接：百度知道·小猪攒钱罐 https://zhidao.baidu.com/question/991838885334906899.html ；百度经验入口说明 https://jingyan.baidu.com/article/4b52d702feff5fbd5d774b26.html\n- 发布时间：百度经验 2023-10-19\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下的\"目标储蓄\"子工具，面向有具体攒"
+        }
+      ],
+      "strategy_verification": {
+        "knowledge_grounded": true,
+        "verified_sources": [
+          "operation_rule/marketing_rule.md",
+          "product/bi_bi_zan.md",
+          "user_growth/young_user_growth.md",
+          "marketing_case/case_002.md",
+          "product/yu_e_bao.md"
+        ],
+        "unsupported_claims": [],
+        "grounding_score": 1.0,
+        "matched_concepts": [
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "自动小额储蓄降低使用门槛",
+            "strategy_field": "product_strategy",
+            "match_type": "exact_or_alias"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "降低使用门槛",
+            "strategy_field": "product_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "节点化内容与社交传播",
+            "strategy_field": "promotion_strategy",
+            "match_type": "exact_or_alias"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛且保持资金流动性的储蓄",
+            "strategy_field": "product_strategy",
+            "match_type": "exact_or_alias"
+          }
+        ],
+        "failed_concepts": [],
+        "explanation": "低门槛储蓄机制对应策略字段content_strategy中的低门槛；低门槛储蓄机制对应策略字段product_strategy中的自动小额储蓄降低使用门槛；低门槛储蓄机制对应策略字段product_strategy中的降低使用门槛；低门槛储蓄机制对应策略字段promotion_strategy中的节点化内容与社交传播；低门槛储蓄机制对应策略字段product_strategy中的低门槛且保持资金流动性的储蓄"
+      }
+    },
+    {
+      "target_segment": "price_sensitive_user",
+      "lifecycle_tags": [
+        "price_sensitive_user",
+        "scenario_enhanced_churn_user",
+        "young_growth_user"
+      ],
+      "marketing_goal": "提升综合兴趣品类转化与成交；培育兴趣并提升转化",
+      "content_strategy": "围绕综合兴趣的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、场景增强沉默用户、年轻成长用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。",
+      "product_strategy": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄",
+      "promotion_strategy": "满减红包；代金券；以综合兴趣定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播",
+      "channel": "APP push、站内信、品类专题页",
+      "metrics": [
+        "点击率",
+        "加购率",
+        "转化率",
+        "客单价提升",
+        "连带购买率"
+      ],
+      "knowledge_plan": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "场景化运营培养储蓄习惯",
+          "purpose": "遵守运营规则",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "自动小额储蓄降低使用门槛",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "strategy_field": "content_strategy",
+          "expected_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "purpose": "支持用户增长运营",
+          "target_field": "content_strategy"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "knowledge_type": "marketing_case",
+          "strategy_field": "promotion_strategy",
+          "expected_concept": "节点化内容与社交传播",
+          "purpose": "提供营销案例依据",
+          "target_field": "promotion_strategy"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "低门槛且保持资金流动性的储蓄",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        },
+        {
+          "document_source": "product\\xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "strategy_field": "product_strategy",
+          "expected_concept": "可视化目标储蓄与进度反馈",
+          "purpose": "解释产品机制",
+          "target_field": "product_strategy"
+        }
+      ],
+      "strategy_requirement": {
+        "business_goal": "retention",
+        "required_segments": [
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "price_sensitive_user",
+          "young_growth_user",
+          "high_value_user",
+          "price_sensitive_user",
+          "scenario_enhanced_churn_user",
+          "young_growth_user"
+        ],
+        "required_strategy_fields": [
+          "product_strategy",
+          "promotion_strategy",
+          "channel",
+          "metrics"
+        ],
+        "must_include_concepts": [
+          "复购",
+          "权益",
+          "会员",
+          "频次"
+        ],
+        "required_knowledge_types": [
+          "product",
+          "marketing_case",
+          "operation_rule"
+        ]
+      },
+      "generated_strategy_text": "针对「综合兴趣消费人群」（约 7.4%，人均消费 ¥1046、人均 2.6 次），围绕综合兴趣设计数据驱动的定向权益。\n围绕综合兴趣的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、场景增强沉默用户、年轻成长用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。\n主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄\n满减红包；代金券；以综合兴趣定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播\nAPP push、站内信、品类专题页\n点击率、加购率、转化率、客单价提升、连带购买率",
+      "used_knowledge_sources": [
+        "operation_rule\\marketing_rule.md",
+        "product\\bi_bi_zan.md",
+        "user_growth\\young_user_growth.md",
+        "marketing_case\\case_002.md",
+        "product\\yu_e_bao.md"
+      ],
+      "knowledge_applications": [
+        {
+          "document_source": "operation_rule\\marketing_rule.md",
+          "applied_concept": "场景化运营培养储蓄习惯",
+          "strategy_field": "content_strategy",
+          "evidence_text": "围绕综合兴趣的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、场景增强沉默用户、年轻成长用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。"
+        },
+        {
+          "document_source": "product\\bi_bi_zan.md",
+          "applied_concept": "自动小额储蓄降低使用门槛",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "document_source": "user_growth\\young_user_growth.md",
+          "applied_concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "document_source": "marketing_case\\case_002.md",
+          "applied_concept": "节点化内容与社交传播",
+          "strategy_field": "promotion_strategy",
+          "evidence_text": "满减红包；代金券；以综合兴趣定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播"
+        },
+        {
+          "document_source": "product\\yu_e_bao.md",
+          "applied_concept": "低门槛且保持资金流动性的储蓄",
+          "strategy_field": "product_strategy",
+          "evidence_text": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        }
+      ],
+      "strategy_knowledge_trace": [
+        {
+          "source": "operation_rule\\marketing_rule.md",
+          "concept": "场景化运营培养储蓄习惯",
+          "used_in": "content_strategy",
+          "evidence": "围绕综合兴趣的真实使用场景做内容（如场景教程、用法攻略、搭配方案），而非单纯商品陈列。围绕价格敏感用户、场景增强沉默用户、年轻成长用户设计分层内容与可执行触达。年轻用户、低门槛、持续参与。策略要求覆盖：复购、权益、会员、频次。依据企业知识：低门槛场景化培养年轻用户储蓄习惯。"
+        },
+        {
+          "source": "product\\bi_bi_zan.md",
+          "concept": "自动小额储蓄降低使用门槛",
+          "used_in": "product_strategy",
+          "evidence": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "source": "user_growth\\young_user_growth.md",
+          "concept": "低门槛场景化培养年轻用户储蓄习惯",
+          "used_in": "product_strategy",
+          "evidence": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        },
+        {
+          "source": "marketing_case\\case_002.md",
+          "concept": "节点化内容与社交传播",
+          "used_in": "promotion_strategy",
+          "evidence": "满减红包；代金券；以综合兴趣定向品类券+套装优惠承接，避免无差别大促稀释品类心智；依据企业知识：场景化运营培养储蓄习惯；依据企业知识：节点化内容与社交传播"
+        },
+        {
+          "source": "product\\yu_e_bao.md",
+          "concept": "低门槛且保持资金流动性的储蓄",
+          "used_in": "product_strategy",
+          "evidence": "主推综合兴趣主款，并搭配该品类周边/耗材形成组合；基于真实购买扩展「综合兴趣商品」相关商品组合；基于真实购买扩展「综合兴趣商品」相关商品组合；结合企业产品机制：自动小额储蓄降低使用门槛；结合企业产品机制：低门槛且保持资金流动性的储蓄"
+        }
+      ],
+      "knowledge_evidence": [
+        {
+          "document_source": "operation_rule/marketing_rule.md",
+          "knowledge_type": "operation_rule",
+          "business_goal": "campaign_conversion",
+          "target_segment": "price_sensitive_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy"
+          ],
+          "evidence_text": "# 营销运营规则（余额宝 / 年轻用户）\n\n## Source\n\n- 来源链接：\n  - 余额宝十周年营销复盘（数英网 2023-07-14）：https://www.digitaling.com/articles/952881.html\n  - 新京报青年消费趋势报告（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n- 发布时间：2023-07-14 / 2024-07-05\n- 资料类型"
+        },
+        {
+          "document_source": "product/bi_bi_zan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 笔笔攒\n\n## Source\n\n- 来源链接：百度百科·笔笔攒 https://baike.baidu.com/item/%E7%AC%94%E7%AC%94%E6%94%92/49804297 ；百度知道产品介绍 https://zhidao.baidu.com/question/949749531946750372.html\n- 发布时间：百科持续更新\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下针对年轻人的\"无痛攒钱\"子工具，将储蓄动作嵌入日常消费链"
+        },
+        {
+          "document_source": "user_growth/young_user_growth.md",
+          "knowledge_type": "user_growth",
+          "business_goal": "young_user_growth",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "content_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 年轻用户增长\n\n## Source\n\n- 来源链接：\n  - 新京报·贝壳财经《青年消费趋势报告》（2024-07-05）：https://www.bjnews.com.cn/detail/1720182740129536.html\n  - 澎湃新闻·2024 年轻人理财趋势（2024-12-20）：https://m.thepaper.cn/newsDetail_forward_29686885\n- 发布时间：2024-07-05 / 2024-12-20\n- 资料类型"
+        },
+        {
+          "document_source": "marketing_case/case_002.md",
+          "knowledge_type": "marketing_case",
+          "business_goal": "campaign_conversion",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "低门槛"
+          ],
+          "applicable_strategy_fields": [
+            "promotion_strategy",
+            "channel"
+          ],
+          "evidence_text": "# 案例 002：余额宝十周年「营销有温度，收益有稳度」\n\n## Source\n\n- 资料链接：数英网 https://www.digitaling.com/articles/952881.html\n- 发布时间：2023-07-14\n- 资料类型：case\n- 作者：营销之美（数英网专栏）\n\n## 背景\n\n2023 年 6 月 13 日为余额宝上线十周年，微博热搜 #余额宝上线第十年# 引发集体回忆。公开披露：累计用户超 8 亿，三线及以下城市用户占比约一半，人均持仓不到 "
+        },
+        {
+          "document_source": "product/yu_e_bao.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "低门槛",
+            "笔笔攒",
+            "用户增长"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 余额宝（Yu'e Bao）\n\n## Source\n\n- 来源链接：百度百科·余额宝 https://baike.baidu.com/item/%E4%BD%99%E9%A2%9D%E5%AE%9D/5713207 ；数英网十周年复盘 https://www.digitaling.com/articles/952881.html\n- 发布时间：百科持续更新；十周年文章 2023-07-14\n- 资料类型：product\n\n## 产品定位\n\n互联网现金管理工具（货币基金接入）"
+        },
+        {
+          "document_source": "product/xiao_zhu_zan_qian_guan.md",
+          "knowledge_type": "product",
+          "business_goal": "product_activation",
+          "target_segment": "young_growth_user",
+          "key_concepts": [
+            "年轻用户",
+            "笔笔攒"
+          ],
+          "applicable_strategy_fields": [
+            "product_strategy",
+            "content_strategy"
+          ],
+          "evidence_text": "# 小猪攒钱罐\n\n## Source\n\n- 来源链接：百度知道·小猪攒钱罐 https://zhidao.baidu.com/question/991838885334906899.html ；百度经验入口说明 https://jingyan.baidu.com/article/4b52d702feff5fbd5d774b26.html\n- 发布时间：百度经验 2023-10-19\n- 资料类型：product\n\n## 产品定位\n\n余额宝旗下的\"目标储蓄\"子工具，面向有具体攒"
+        }
+      ],
+      "strategy_verification": {
+        "knowledge_grounded": true,
+        "verified_sources": [
+          "operation_rule/marketing_rule.md",
+          "product/bi_bi_zan.md",
+          "user_growth/young_user_growth.md",
+          "marketing_case/case_002.md",
+          "product/yu_e_bao.md"
+        ],
+        "unsupported_claims": [],
+        "grounding_score": 1.0,
+        "matched_concepts": [
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛",
+            "strategy_field": "content_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "自动小额储蓄降低使用门槛",
+            "strategy_field": "product_strategy",
+            "match_type": "exact_or_alias"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "降低使用门槛",
+            "strategy_field": "product_strategy",
+            "match_type": "business_concept_match"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "节点化内容与社交传播",
+            "strategy_field": "promotion_strategy",
+            "match_type": "exact_or_alias"
+          },
+          {
+            "knowledge_concept": "低门槛储蓄机制",
+            "strategy_expression": "低门槛且保持资金流动性的储蓄",
+            "strategy_field": "product_strategy",
+            "match_type": "exact_or_alias"
+          }
+        ],
+        "failed_concepts": [],
+        "explanation": "低门槛储蓄机制对应策略字段content_strategy中的低门槛；低门槛储蓄机制对应策略字段product_strategy中的自动小额储蓄降低使用门槛；低门槛储蓄机制对应策略字段product_strategy中的降低使用门槛；低门槛储蓄机制对应策略字段promotion_strategy中的节点化内容与社交传播；低门槛储蓄机制对应策略字段product_strategy中的低门槛且保持资金流动性的储蓄"
+      }
+    }
+  ],
+  "human_review_template": {
+    "business_relevance": null,
+    "actionability": null,
+    "enterprise_knowledge_alignment": null,
+    "scale": "1-5"
+  }
+}

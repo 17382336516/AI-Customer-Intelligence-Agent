@@ -1,0 +1,19 @@
+{
+  "description": "Backward-compatible knowledge relevance schema v3",
+  "fields": {
+    "expected_knowledge_set": [
+      {
+        "source": "product/bi_bi_zan.md",
+        "relevance": "primary",
+        "purpose": "解释产品机制"
+      },
+      {
+        "source": "marketing_case/case_001.md",
+        "relevance": "secondary",
+        "purpose": "提供营销案例依据"
+      }
+    ],
+    "knowledge_relevance_level": ["primary", "secondary", "optional"]
+  },
+  "compatibility": "When expected_knowledge_set is absent, evaluators use expected_knowledge_sources as primary sources."
+}

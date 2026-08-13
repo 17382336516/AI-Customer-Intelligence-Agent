@@ -36,6 +36,12 @@ class Settings:
     database_url: str = os.getenv("DATABASE_URL", "sqlite:///./data/app.db")
     upload_dir: Path = Path(os.getenv("UPLOAD_DIR", "./data/uploads"))
     knowledge_dir: Path = Path(os.getenv("KNOWLEDGE_DIR", "./data/knowledge"))
+    enterprise_knowledge_dir: Path = Path(
+        os.getenv(
+            "ENTERPRISE_KNOWLEDGE_DIR",
+            str(Path(__file__).resolve().parents[1] / "app" / "enterprise_rag"),
+        )
+    )
     cors_origins: tuple[str, ...] = _csv(
         os.getenv("CORS_ORIGINS", "http://localhost:5173")
     )
@@ -45,6 +51,7 @@ class Settings:
     llm_timeout_seconds: float = float(os.getenv("LLM_TIMEOUT_SECONDS", "45"))
     llm_enhance_insights: bool = os.getenv("LLM_ENHANCE_INSIGHTS", "false").lower() == "true"
     llm_enhance_strategy: bool = os.getenv("LLM_ENHANCE_STRATEGY", "false").lower() == "true"
+    llm_fallback_open_tasks: bool = os.getenv("LLM_FALLBACK_OPEN_TASKS", "false").lower() == "true"
     min_analyzable_rows: int = int(os.getenv("MIN_ANALYZABLE_ROWS", "20"))
     max_upload_mb: int = int(os.getenv("MAX_UPLOAD_MB", "25"))
     default_cluster_count: int = int(os.getenv("DEFAULT_CLUSTER_COUNT", "4"))

@@ -1,0 +1,347 @@
+{
+  "dataset_name": "customer_intelligence_agent_benchmark_v1",
+  "source": {
+    "name": "UCI Machine Learning Repository - Online Retail (local public transaction copy)",
+    "source_file": "data/Online_Retail.xlsx",
+    "source_type": "public_real_transaction_plus_business_enhancement",
+    "usage_note": "真实客户、订单、商品、时间、数量与成交价来自公开交易数据；人口属性、标准商品目录和生命周期场景为业务增强。"
+  },
+  "dataset_count": 3,
+  "total_users": 12000,
+  "total_orders": 84000,
+  "file_size": "15.23 MiB",
+  "segments": [
+    "scenario_enhanced_churn_user",
+    "price_sensitive_user",
+    "category_interest_user",
+    "young_growth_user",
+    "high_value_user"
+  ],
+  "business_questions": [
+    "dataset_01_general_q01",
+    "dataset_01_general_q02",
+    "dataset_01_general_q03",
+    "dataset_01_general_q04",
+    "dataset_01_general_q05",
+    "dataset_01_general_q06",
+    "dataset_01_general_q07",
+    "dataset_01_general_q08",
+    "dataset_01_general_q09",
+    "dataset_01_general_q10",
+    "dataset_01_general_q11",
+    "dataset_01_general_q12",
+    "dataset_01_general_q13",
+    "dataset_01_general_q14",
+    "dataset_01_general_q15",
+    "dataset_02_growth_campaign_q01",
+    "dataset_02_growth_campaign_q02",
+    "dataset_02_growth_campaign_q03",
+    "dataset_02_growth_campaign_q04",
+    "dataset_02_growth_campaign_q05",
+    "dataset_02_growth_campaign_q06",
+    "dataset_02_growth_campaign_q07",
+    "dataset_02_growth_campaign_q08",
+    "dataset_02_growth_campaign_q09",
+    "dataset_02_growth_campaign_q10",
+    "dataset_02_growth_campaign_q11",
+    "dataset_02_growth_campaign_q12",
+    "dataset_02_growth_campaign_q13",
+    "dataset_02_growth_campaign_q14",
+    "dataset_02_growth_campaign_q15",
+    "dataset_03_retention_interest_q01",
+    "dataset_03_retention_interest_q02",
+    "dataset_03_retention_interest_q03",
+    "dataset_03_retention_interest_q04",
+    "dataset_03_retention_interest_q05",
+    "dataset_03_retention_interest_q06",
+    "dataset_03_retention_interest_q07",
+    "dataset_03_retention_interest_q08",
+    "dataset_03_retention_interest_q09",
+    "dataset_03_retention_interest_q10",
+    "dataset_03_retention_interest_q11",
+    "dataset_03_retention_interest_q12",
+    "dataset_03_retention_interest_q13",
+    "dataset_03_retention_interest_q14",
+    "dataset_03_retention_interest_q15"
+  ],
+  "datasets": [
+    {
+      "dataset_id": "dataset_01_general",
+      "dataset_name": "综合消费基准",
+      "source": {
+        "name": "UCI Machine Learning Repository - Online Retail (local public transaction copy)",
+        "source_file": "data/Online_Retail.xlsx",
+        "source_type": "public_real_transaction_plus_business_enhancement",
+        "usage_note": "真实客户、订单、商品、时间、数量与成交价来自公开交易数据；人口属性、标准商品目录和生命周期场景为业务增强。"
+      },
+      "total_users": 4000,
+      "total_orders": 28000,
+      "file_size": "5.08 MiB",
+      "file_size_bytes": 5325808,
+      "field_count": 24,
+      "segments": [
+        {
+          "segment_name": "young_growth_user",
+          "proportion": 0.31,
+          "user_count": 1240,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "price_sensitive_user",
+          "proportion": 0.2,
+          "user_count": 800,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "high_value_user",
+          "proportion": 0.19,
+          "user_count": 760,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "category_interest_user",
+          "proportion": 0.17,
+          "user_count": 680,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "scenario_enhanced_churn_user",
+          "proportion": 0.13,
+          "user_count": 520,
+          "characteristics": "scenario_enhanced"
+        }
+      ],
+      "category_segments": {
+        "电子产品偏好用户": 1712,
+        "旅游偏好用户": 837,
+        "美妆偏好用户": 314,
+        "服饰偏好用户": 297,
+        "运动偏好用户": 282,
+        "家居偏好用户": 232,
+        "母婴偏好用户": 208,
+        "食品偏好用户": 118
+      },
+      "business_questions": [
+        "dataset_01_general_q01",
+        "dataset_01_general_q02",
+        "dataset_01_general_q03",
+        "dataset_01_general_q04",
+        "dataset_01_general_q05",
+        "dataset_01_general_q06",
+        "dataset_01_general_q07",
+        "dataset_01_general_q08",
+        "dataset_01_general_q09",
+        "dataset_01_general_q10",
+        "dataset_01_general_q11",
+        "dataset_01_general_q12",
+        "dataset_01_general_q13",
+        "dataset_01_general_q14",
+        "dataset_01_general_q15"
+      ],
+      "business_test_targets": [
+        "Data Agent商品偏好分群准确性",
+        "Insight Agent生命周期理解真实性",
+        "Enterprise Knowledge RAG召回与引用",
+        "Strategy Agent策略匹配与风险控制"
+      ],
+      "scenario_enhanced_churn_user_note": "该标签为业务场景增强，不代表原始数据中的真实流失用户；用户内部行为间隔保留，但历史时间块被平移至观察日前91至180天。",
+      "label_isolation": "上传文件不包含ground_truth_segment、category_ground_truth或lifecycle_ground_truth；标签仅保存在benchmark_labels.csv。"
+    },
+    {
+      "dataset_id": "dataset_02_growth_campaign",
+      "dataset_name": "年轻增长与促销基准",
+      "source": {
+        "name": "UCI Machine Learning Repository - Online Retail (local public transaction copy)",
+        "source_file": "data/Online_Retail.xlsx",
+        "source_type": "public_real_transaction_plus_business_enhancement",
+        "usage_note": "真实客户、订单、商品、时间、数量与成交价来自公开交易数据；人口属性、标准商品目录和生命周期场景为业务增强。"
+      },
+      "total_users": 4000,
+      "total_orders": 28000,
+      "file_size": "5.08 MiB",
+      "file_size_bytes": 5330587,
+      "field_count": 24,
+      "segments": [
+        {
+          "segment_name": "young_growth_user",
+          "proportion": 0.35,
+          "user_count": 1400,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "price_sensitive_user",
+          "proportion": 0.22,
+          "user_count": 880,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "high_value_user",
+          "proportion": 0.17,
+          "user_count": 680,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "category_interest_user",
+          "proportion": 0.16,
+          "user_count": 640,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "scenario_enhanced_churn_user",
+          "proportion": 0.1,
+          "user_count": 400,
+          "characteristics": "scenario_enhanced"
+        }
+      ],
+      "category_segments": {
+        "电子产品偏好用户": 1675,
+        "旅游偏好用户": 888,
+        "美妆偏好用户": 309,
+        "服饰偏好用户": 285,
+        "运动偏好用户": 275,
+        "母婴偏好用户": 232,
+        "家居偏好用户": 226,
+        "食品偏好用户": 110
+      },
+      "business_questions": [
+        "dataset_02_growth_campaign_q01",
+        "dataset_02_growth_campaign_q02",
+        "dataset_02_growth_campaign_q03",
+        "dataset_02_growth_campaign_q04",
+        "dataset_02_growth_campaign_q05",
+        "dataset_02_growth_campaign_q06",
+        "dataset_02_growth_campaign_q07",
+        "dataset_02_growth_campaign_q08",
+        "dataset_02_growth_campaign_q09",
+        "dataset_02_growth_campaign_q10",
+        "dataset_02_growth_campaign_q11",
+        "dataset_02_growth_campaign_q12",
+        "dataset_02_growth_campaign_q13",
+        "dataset_02_growth_campaign_q14",
+        "dataset_02_growth_campaign_q15"
+      ],
+      "business_test_targets": [
+        "Data Agent商品偏好分群准确性",
+        "Insight Agent生命周期理解真实性",
+        "Enterprise Knowledge RAG召回与引用",
+        "Strategy Agent策略匹配与风险控制"
+      ],
+      "scenario_enhanced_churn_user_note": "该标签为业务场景增强，不代表原始数据中的真实流失用户；用户内部行为间隔保留，但历史时间块被平移至观察日前91至180天。",
+      "label_isolation": "上传文件不包含ground_truth_segment、category_ground_truth或lifecycle_ground_truth；标签仅保存在benchmark_labels.csv。"
+    },
+    {
+      "dataset_id": "dataset_03_retention_interest",
+      "dataset_name": "留存与品类兴趣基准",
+      "source": {
+        "name": "UCI Machine Learning Repository - Online Retail (local public transaction copy)",
+        "source_file": "data/Online_Retail.xlsx",
+        "source_type": "public_real_transaction_plus_business_enhancement",
+        "usage_note": "真实客户、订单、商品、时间、数量与成交价来自公开交易数据；人口属性、标准商品目录和生命周期场景为业务增强。"
+      },
+      "total_users": 4000,
+      "total_orders": 28000,
+      "file_size": "5.07 MiB",
+      "file_size_bytes": 5315435,
+      "field_count": 24,
+      "segments": [
+        {
+          "segment_name": "young_growth_user",
+          "proportion": 0.26,
+          "user_count": 1040,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "high_value_user",
+          "proportion": 0.24,
+          "user_count": 960,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "category_interest_user",
+          "proportion": 0.19,
+          "user_count": 760,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "price_sensitive_user",
+          "proportion": 0.16,
+          "user_count": 640,
+          "characteristics": "rule_derived_from_behavior_and_business_enhancement"
+        },
+        {
+          "segment_name": "scenario_enhanced_churn_user",
+          "proportion": 0.15,
+          "user_count": 600,
+          "characteristics": "scenario_enhanced"
+        }
+      ],
+      "category_segments": {
+        "电子产品偏好用户": 1695,
+        "旅游偏好用户": 872,
+        "美妆偏好用户": 312,
+        "运动偏好用户": 294,
+        "服饰偏好用户": 262,
+        "母婴偏好用户": 232,
+        "家居偏好用户": 221,
+        "食品偏好用户": 112
+      },
+      "business_questions": [
+        "dataset_03_retention_interest_q01",
+        "dataset_03_retention_interest_q02",
+        "dataset_03_retention_interest_q03",
+        "dataset_03_retention_interest_q04",
+        "dataset_03_retention_interest_q05",
+        "dataset_03_retention_interest_q06",
+        "dataset_03_retention_interest_q07",
+        "dataset_03_retention_interest_q08",
+        "dataset_03_retention_interest_q09",
+        "dataset_03_retention_interest_q10",
+        "dataset_03_retention_interest_q11",
+        "dataset_03_retention_interest_q12",
+        "dataset_03_retention_interest_q13",
+        "dataset_03_retention_interest_q14",
+        "dataset_03_retention_interest_q15"
+      ],
+      "business_test_targets": [
+        "Data Agent商品偏好分群准确性",
+        "Insight Agent生命周期理解真实性",
+        "Enterprise Knowledge RAG召回与引用",
+        "Strategy Agent策略匹配与风险控制"
+      ],
+      "scenario_enhanced_churn_user_note": "该标签为业务场景增强，不代表原始数据中的真实流失用户；用户内部行为间隔保留，但历史时间块被平移至观察日前91至180天。",
+      "label_isolation": "上传文件不包含ground_truth_segment、category_ground_truth或lifecycle_ground_truth；标签仅保存在benchmark_labels.csv。"
+    }
+  ],
+  "field_lineage": {
+    "source_derived": [
+      "customer_id",
+      "order_id"
+    ],
+    "derived": [
+      "purchase_frequency",
+      "total_consumption",
+      "average_order_value",
+      "category_diversity",
+      "activity_frequency"
+    ],
+    "scenario_time_enhanced": [
+      "purchase_date",
+      "last_purchase_days"
+    ],
+    "business_enhanced": [
+      "age",
+      "gender",
+      "city",
+      "income_level",
+      "membership_level",
+      "product_category",
+      "product_brand",
+      "product_name",
+      "purchase_amount",
+      "quantity",
+      "coupon_usage",
+      "preferred_channel"
+    ],
+    "lineage_note": "customer_id、order_id、商品、时间、数量和成交价来自UCI Online Retail公开真实交易；最终ID稳定脱敏，场景日期整体平移，标准品类、人口属性和生命周期标签为可追溯业务增强。"
+  }
+}

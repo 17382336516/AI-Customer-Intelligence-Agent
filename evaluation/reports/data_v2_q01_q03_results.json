@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "run_mode": "agent_execution",
+  "evaluation_run_metadata": {
+    "evaluation_version": "data_v2",
+    "dataset_version": "v1",
+    "model_version": "deterministic_fallback_data_v2",
+    "prompt_version": "1.0",
+    "knowledge_base_version": "enterprise_rag_v2",
+    "run_time": "2026-08-10T16:10:37.701289+00:00"
+  },
+  "dataset_id": "dataset_01_general",
+  "knowledge_base_loaded_documents_count": 14,
+  "question_count": 3,
+  "generated_at": "2026-08-10T16:10:37.701289+00:00",
+  "summary": {
+    "average_overall_score": 89.91,
+    "e2e_pass_count": 0,
+    "e2e_pass_rate": 0.0
+  },
+  "results": [
+    {
+      "dataset_id": "dataset_01_general",
+      "question_id": "dataset_01_general_q01",
+      "metrics": {
+        "data_score": 73.81,
+        "insight_score": 92.5,
+        "knowledge_score": 100.0,
+        "strategy_score": 100.0,
+        "overall_score": 92.89
+      },
+      "metric_details": {
+        "data": {
+          "consumption_preference_accuracy": 71.53,
+          "distribution_similarity": 79.15,
+          "data_score": 73.81
+        },
+        "insight": {
+          "segment_recognition_rate": 100.0,
+          "insight_grounding_rate": 87.5,
+          "insight_score": 92.5
+        },
+        "knowledge": {
+          "recall_at_3": 100.0,
+          "mrr": 100.0,
+          "knowledge_score": 100.0
+        },
+        "strategy": {
+          "golden_rule_coverage": 100.0,
+          "structural_coverage": 100.0,
+          "semantic_coverage": 100.0,
+          "knowledge_adoption_rate": 100.0,
+          "risk_violation_rate": 0.0,
+          "violations": [],
+          "strategy_score": 100.0
+        }
+      },
+      "e2e_pass": false,
+      "agent_status": {
+        "data": true,
+        "insight": true,
+        "knowledge": true,
+        "strategy": true
+      },
+      "knowledge_documents_loaded": 14,
+      "artifact_path": "D:\\Trae CN\\AI Customer Intelligence Agent\\evaluation\\reports\\artifacts\\dataset_01_general\\dataset_01_general_q01"
+    },
+    {
+      "dataset_id": "dataset_01_general",
+      "question_id": "dataset_01_general_q02",
+      "metrics": {
+        "data_score": 73.81,
+        "insight_score": 92.5,
+        "knowledge_score": 100.0,
+        "strategy_score": 97.0,
+        "overall_score": 91.84
+      },
+      "metric_details": {
+        "data": {
+          "consumption_preference_accuracy": 71.53,
+          "distribution_similarity": 79.15,
+          "data_score": 73.81
+        },
+        "insight": {
+          "segment_recognition_rate": 100.0,
+          "insight_grounding_rate": 87.5,
+          "insight_score": 92.5
+        },
+        "knowledge": {
+          "recall_at_3": 100.0,
+          "mrr": 100.0,
+          "knowledge_score": 100.0
+        },
+        "strategy": {
+          "golden_rule_coverage": 95.0,
+          "structural_coverage": 90.0,
+          "semantic_coverage": 100.0,
+          "knowledge_adoption_rate": 100.0,
+          "risk_violation_rate": 0.0,
+          "violations": [],
+          "strategy_score": 97.0
+        }
+      },
+      "e2e_pass": false,
+      "agent_status": {
+        "data": true,
+        "insight": true,
+        "knowledge": true,
+        "strategy": true
+      },
+      "knowledge_documents_loaded": 14,
+      "artifact_path": "D:\\Trae CN\\AI Customer Intelligence Agent\\evaluation\\reports\\artifacts\\dataset_01_general\\dataset_01_general_q02"
+    },
+    {
+      "dataset_id": "dataset_01_general",
+      "question_id": "dataset_01_general_q03",
+      "metrics": {
+        "data_score": 73.81,
+        "insight_score": 92.5,
+        "knowledge_score": 100.0,
+        "strategy_score": 77.5,
+        "overall_score": 85.01
+      },
+      "metric_details": {
+        "data": {
+          "consumption_preference_accuracy": 71.53,
+          "distribution_similarity": 79.15,
+          "data_score": 73.81
+        },
+        "insight": {
+          "segment_recognition_rate": 100.0,
+          "insight_grounding_rate": 87.5,
+          "insight_score": 92.5
+        },
+        "knowledge": {
+          "recall_at_3": 100.0,
+          "mrr": 100.0,
+          "knowledge_score": 100.0
+        },
+        "strategy": {
+          "golden_rule_coverage": 62.5,
+          "structural_coverage": 100.0,
+          "semantic_coverage": 25.0,
+          "knowledge_adoption_rate": 100.0,
+          "risk_violation_rate": 0.0,
+          "violations": [],
+          "strategy_score": 77.5
+        }
+      },
+      "e2e_pass": false,
+      "agent_status": {
+        "data": true,
+        "insight": true,
+        "knowledge": true,
+        "strategy": true
+      },
+      "knowledge_documents_loaded": 14,
+      "artifact_path": "D:\\Trae CN\\AI Customer Intelligence Agent\\evaluation\\reports\\artifacts\\dataset_01_general\\dataset_01_general_q03"
+    }
+  ]
+}

@@ -28,6 +28,7 @@ import {
   getDatasetDetail,
   getEvents,
   listDatasets,
+  renameDataset,
   startAnalysis,
   uploadDataset,
 } from './api'
@@ -52,6 +53,10 @@ const dragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
 // 新建会话时的会话名称（自定义优先，否则按数据集名自动生成）
 const sessionName = ref('')
+// 左侧数据集自定义显示名称（重命名对话框）
+const renameVisible = ref(false)
+const renameTarget = ref<Session | null>(null)
+const renameInput = ref('')
 
 // 继续追问
 const followUpQuestion = ref('')
@@ -210,6 +215,7 @@ async function refreshSessions() {
     id: ds.id,
     dataset_id: ds.id,
     dataset_name: ds.name,
+    display_name: ds.display_name || '',
     name: `${ds.name} 分析项目`,
     status: 'active',
     summary: '',
@@ -227,6 +233,30 @@ async function refreshSessions() {
     const savedId = localStorage.getItem(STORAGE_SELECTED)
     const target = sessions.value.find((item) => item.id === savedId) ?? sessions.value[0]
     await openSession(target)
+  }
+}
+
+// 左侧数据集显示名称：自定义 display_name 优先，否则回退到数据集名
+function datasetDisplayName(s: Session): string {
+  return s.display_name?.trim() || s.dataset_name || '未命名数据集'
+}
+
+function openRenameDialog(record: Session) {
+  renameTarget.value = record
+  renameInput.value = record.display_name?.trim() || ''
+  renameVisible.value = true
+}
+
+async function confirmRename() {
+  if (!renameTarget.value) return
+  const target = renameTarget.value
+  try {
+    const updated = await renameDataset(target.dataset_id, renameInput.value.trim())
+    target.display_name = updated.display_name || ''
+    renameVisible.value = false
+    ElMessage.success('显示名称已更新')
+  } catch {
+    ElMessage.error('更新显示名称失败')
   }
 }
 
@@ -654,11 +684,14 @@ onMounted(async () => {
         >
           <Document class="session-icon" />
           <div class="session-item-main">
-            <strong>{{ record.dataset_name || record.name || '未命名数据集' }}</strong>
+            <strong>{{ datasetDisplayName(record) }}</strong>
             <span>业务分析记录：{{ record.stats.conversation_count }}</span>
             <small>更新于 {{ formatTime(record.updated_at) }}</small>
           </div>
-          <button class="session-delete" title="删除" @click="removeSession(record, $event)">×</button>
+          <div class="session-item-actions">
+            <button class="session-rename" title="重命名" @click="openRenameDialog(record)">✎</button>
+            <button class="session-delete" title="删除" @click="removeSession(record, $event)">×</button>
+          </div>
         </button>
         <div v-if="!sessions.length" class="session-empty">还没有数据集。点击「新建分析会话」开始。</div>
       </nav>
@@ -1189,7 +1222,7 @@ onMounted(async () => {
           </header>
 
           <div class="session-info-strip">
-            <div><span>数据名称</span><strong>{{ selectedSession.dataset_name }}</strong></div>
+            <div><span>数据名称</span><strong>{{ datasetDisplayName(selectedSession) }}</strong></div>
             <div><span>创建时间</span><strong>{{ formatTime(selectedSession.created_at) }}</strong></div>
             <div><span>用户数量</span><strong>{{ assetResult ? assetResult.quality.user_count.toLocaleString() : (sessionDetail.session.stats.segment_count ? '—' : '—') }}</strong></div>
             <div><span>数据状态</span><strong>{{ selectedSession.status }}</strong></div>
@@ -1403,4 +1436,19 @@ onMounted(async () => {
       </template>
     </main>
   </div>
+
+  <el-dialog v-model="renameVisible" title="重命名数据集显示名称" width="420px">
+    <p class="rename-hint">该名称仅用于左侧列表展示，不影响实际数据集文件。</p>
+    <el-input
+      v-model="renameInput"
+      placeholder="留空则恢复为数据集文件名称"
+      maxlength="50"
+      show-word-limit
+      @keyup.enter="confirmRename"
+    />
+    <template #footer>
+      <el-button @click="renameVisible = false">取消</el-button>
+      <el-button type="primary" @click="confirmRename">确定</el-button>
+    </template>
+  </el-dialog>
 </template>

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "evaluation_run_metadata": {
+    "evaluation_version": "v4",
+    "benchmark_version": "v1",
+    "dataset_version": "v1",
+    "model_version": "single_category_fix_v1",
+    "model_mode": "deterministic_fallback",
+    "prompt_version": "1.0",
+    "knowledge_base_version": "enterprise_rag_v2",
+    "question_count": 45
+  },
+  "metrics": {
+    "data": {"d1_consumption_preference_accuracy": 91.11, "d2_distribution_similarity": 98.83, "data_score": 93.43},
+    "insight": {"i1_lifecycle_recognition": 100.0, "i2_insight_grounding": 100.0, "insight_score": 100.0},
+    "knowledge": {"k1_recall_at_3": 48.33, "k2_mrr": 60.67, "knowledge_score": 52.03},
+    "strategy": {"s1_golden_coverage": 67.33, "s2_knowledge_adoption": 62.78, "s3_risk_violation": 0.0, "strategy_score": 71.09},
+    "overall_score": 78.98,
+    "e2e_pass_count": 6,
+    "e2e_pass_rate": 13.33
+  },
+  "dataset_summaries": {
+    "dataset_01_general": {"questions": 15, "average_overall_score": 81.12, "e2e_pass_count": 2},
+    "dataset_02_growth_campaign": {"questions": 15, "average_overall_score": 75.30, "e2e_pass_count": 1},
+    "dataset_03_retention_interest": {"questions": 15, "average_overall_score": 80.51, "e2e_pass_count": 3}
+  },
+  "source_result_files": ["v4_dataset_01_results.json", "v4_dataset_02_results.json", "v4_dataset_03_results.json"]
+}

@@ -1,0 +1,48 @@
+{
+  "evaluation_scope": "dataset_01_general q01-q03",
+  "grounding_before": 54.44,
+  "grounding_after": 94.07,
+  "results": [
+    {
+      "question_id": "dataset_01_general_q01",
+      "grounding_score": 100.0,
+      "knowledge_score": 100.0,
+      "strategy_score": 100.0,
+      "overall_score": 98.65,
+      "e2e": true,
+      "matched_concepts": ["低门槛储蓄机制", "年轻用户增长"],
+      "failed_concepts": [],
+      "explanation": "自动小额储蓄、低门槛和年轻用户表达通过业务概念层映射到策略字段。"
+    },
+    {
+      "question_id": "dataset_01_general_q02",
+      "grounding_score": 100.0,
+      "knowledge_score": 65.0,
+      "strategy_score": 97.0,
+      "overall_score": 90.6,
+      "e2e": false,
+      "matched_concepts": ["低门槛储蓄机制", "年轻用户增长"],
+      "failed_concepts": [],
+      "explanation": "产品机制与年轻用户增长概念均能在对应策略字段找到语义表达；E2E失败仍来自知识召回，不由grounding放宽造成。"
+    },
+    {
+      "question_id": "dataset_01_general_q03",
+      "grounding_score": 82.22,
+      "knowledge_score": 100.0,
+      "strategy_score": 85.0,
+      "overall_score": 93.4,
+      "e2e": false,
+      "matched_concepts": ["年轻用户增长", "低门槛储蓄机制"],
+      "failed_concepts": ["节点化内容与社交传播"],
+      "explanation": "主要知识概念完成source→concept→field→expression闭环；节点化内容概念仍未在content_strategy中找到对应表达。"
+    }
+  ],
+  "summary": {
+    "average_grounding_score": 94.07,
+    "average_knowledge_score": 88.33,
+    "average_strategy_score": 94.0,
+    "average_overall_score": 94.22,
+    "e2e_pass_rate": 33.33,
+    "knowledge_documents_loaded": 14
+  }
+}
