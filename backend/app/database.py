@@ -159,7 +159,15 @@ engine_kwargs: dict[str, Any] = {"pool_pre_ping": True}
 if settings.database_url.startswith("sqlite"):
     engine_kwargs["connect_args"] = {"check_same_thread": False}
 
-engine = create_engine(settings.database_url, **engine_kwargs)
+database_url = settings.database_url
+# Render supplies postgres:// or postgresql:// URLs. This project installs
+# both psycopg2-binary (v2, default) and psycopg (v3). We prefer psycopg2 for
+# maximum deployment stability on platforms like Render.
+if database_url.startswith("postgres://"):
+    database_url = "postgresql+psycopg2://" + database_url.removeprefix("postgres://")
+elif database_url.startswith("postgresql://"):
+    database_url = "postgresql+psycopg2://" + database_url.removeprefix("postgresql://")
+engine = create_engine(database_url, **engine_kwargs)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, expire_on_commit=False)
 
 
