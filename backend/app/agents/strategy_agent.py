@@ -128,6 +128,15 @@ class StrategyAgent:
             "copy": any(token in question for token in ("文案", "标题", "slogan", "话术")),
             "differentiation": any(token in question for token in ("差异化", "分别", "不同人群")),
         }
+        dominant_key = str(dominant or "").lower()
+        if any(token in dominant_key or token in dominant_cn.lower() for token in ("coffee", "beans", "咖啡")):
+            category_play = "coffee"
+        elif any(token in dominant_key or token in dominant_cn.lower() for token in ("luggage", "travel", "旅行", "行李")):
+            category_play = "travel"
+        elif any(token in dominant_key or token in dominant_cn.lower() for token in ("cat_food", "pet", "萌宠", "猫粮")):
+            category_play = "pet_food"
+        else:
+            category_play = "general"
         question_terms: list[str] = []
         if any(token in question for token in ("年轻", "增长", "转化")):
             question_terms.extend(["年轻用户", "低门槛", "持续参与"])
@@ -212,6 +221,12 @@ class StrategyAgent:
             marketing_direction = "用轻量券与兴趣内容培育，逐步提升转化。"
 
         ad_theme = f"为{dominant_cn if dominant else '你的兴趣'}而来" if dominant else "为你精选"
+        if category_play == "coffee":
+            ad_theme = "咖啡豆复购与口味升级"
+        elif category_play == "travel":
+            ad_theme = "一套旅行装备，减少出发前决策"
+        elif category_play == "pet_food":
+            ad_theme = "按周期补货，安心养宠"
         ad_elements = list(visual_keywords)
         if dominant:
             ad_elements.append(f"{dominant_cn}场景")
@@ -264,6 +279,12 @@ class StrategyAgent:
             goals.insert(0, "提升分层 Push 的打开、点击与回流转化")
         elif question_focus["page"] or question_focus["campaign"]:
             goals.insert(0, "提升专题页承接效率与活动转化")
+        if category_play == "coffee":
+            goals.insert(0, "提升咖啡豆复购，并通过口味/规格差异化带动升级")
+        elif category_play == "travel":
+            goals.insert(0, "提升高客单旅行装备的组合购买与决策转化")
+        elif category_play == "pet_food":
+            goals.insert(0, "建立猫粮周期补货习惯，提升复购和连续购买")
         marketing_goal = "；".join(goals[:3])
 
         # 2) 内容策略：场景化内容方向（不只有商品陈列），依据品类与行为。
@@ -285,6 +306,12 @@ class StrategyAgent:
                 content_parts.append("旅行·luggage人群采用出行准备场景：出发前补购清单、轻量收纳技巧与目的地适配建议，Push 只承接一个明确动作")
             else:
                 content_parts.append("Push 内容按人群阶段拆分：高频用户强调补购/升级，沉默用户强调低门槛回流，正文只保留一个明确行动按钮")
+        if category_play == "coffee":
+            content_parts.append("围绕咖啡豆的口味、烘焙度、规格和复购周期做选择内容，用已购买品类做相邻口味/规格升级，不泛化为生活方式兴趣")
+        elif category_play == "travel":
+            content_parts.append("围绕旅行箱容量、收纳分区、耐用材质与出行前准备做决策内容，先解决高客单用户的比较成本，再承接组合购买")
+        elif category_play == "pet_food":
+            content_parts.append("围绕猫粮消耗周期、规格组合和补货提醒做连续内容，把高频购买转化为稳定补货计划，不只依赖一次性红包")
         if question_focus["page"] or question_focus["campaign"]:
             content_parts.append("专题页按首屏利益点→人群专属商品→权益说明→行动按钮组织，页面内容与人群主品类保持一一对应")
         if question_focus["differentiation"]:
@@ -300,6 +327,12 @@ class StrategyAgent:
         product_parts: list[str] = []
         if dominant:
             product_parts.append(f"主推{dominant_cn}主款，并搭配该品类周边/耗材形成组合")
+        if category_play == "coffee":
+            product_parts.append("以当前咖啡豆为基准推荐相邻口味/烘焙度或规格组合，设置尝鲜装→常规装→囤货装的升级路径")
+        elif category_play == "travel":
+            product_parts.append("以旅行·luggage主款搭配收纳配件/保护配件形成套装，按容量和使用场景给出清晰的升级梯度")
+        elif category_play == "pet_food":
+            product_parts.append("以猫粮主款搭配多周期装或补货组合，按预计消耗周期提供 30/60 天选择，减少断粮风险")
         for di in direct_interests[:2]:
             product_parts.append(f"基于真实购买扩展「{di}」相关商品组合")
         if brands:
@@ -336,6 +369,12 @@ class StrategyAgent:
                     promo_parts.append("旅行人群文案示例：‘出发前，把常用装备一次备齐’；按钮：‘查看旅行装备清单’；避免泛化为旅游兴趣推断")
                 else:
                     promo_parts.append("文案结构使用‘人群场景 + 品类利益 + 单一行动’：例如‘你的咖啡豆快补货了｜查看本周复购权益’")
+        if category_play == "coffee":
+            promo_parts.append("咖啡豆采用第二件/组合装阶梯优惠与复购券，优先引导相邻口味尝鲜，避免对低客单人群直接投入高额补贴")
+        elif category_play == "travel":
+            promo_parts.append("旅行·luggage采用套装立减、配件加购优惠和分期/会员权益，减少单品降价，围绕高客单决策提供明确的购买理由")
+        elif category_play == "pet_food":
+            promo_parts.append("猫粮采用周期购、订阅优惠和提前补货提醒，高频用户给连续购买权益，避免只发一次性红包造成补贴浪费")
         if question_focus["page"] or question_focus["campaign"]:
             promo_parts.append("专题页/活动采用人群专属入口，首屏展示主品类权益，中段展示组合商品，底部以领取权益或加入购物车作为唯一主 CTA")
         if required_concepts:
@@ -354,6 +393,12 @@ class StrategyAgent:
             metrics.extend(["Push送达率", "Push打开率", "Push点击率", "退订率"])
         if question_focus["page"] or question_focus["campaign"]:
             metrics.extend(["专题页到达率", "权益领取率", "页面 CTA 点击率"])
+        if category_play == "coffee":
+            metrics.extend(["咖啡豆复购率", "相邻口味尝鲜率", "组合装购买率"])
+        elif category_play == "travel":
+            metrics.extend(["套装购买率", "配件连带率", "高客单转化率"])
+        elif category_play == "pet_food":
+            metrics.extend(["周期购开通率", "30/60 天复购率", "断购率"])
 
         # 策略依据：必须可追溯，禁止生成无依据的营销建议。
         data_basis: list[str] = []
