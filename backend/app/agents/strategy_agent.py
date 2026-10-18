@@ -209,6 +209,12 @@ class StrategyAgent:
         target_positioning = f"面向{'、'.join(position_parts)}的人群，追求明确的需求满足与品质体验。"
         if lifecycle_text:
             target_positioning = f"{lifecycle_text}：{target_positioning}"
+        if category_play == "coffee":
+            target_positioning = "咖啡豆明确偏好人群：客单低于整体但有稳定购买频次，适合做口味/规格升级与复购培育。"
+        elif category_play == "travel":
+            target_positioning = "旅行箱高客单决策人群：购买频次较低但单次价值较高，重点解决比较成本并提升套装与配件连带。"
+        elif category_play == "pet_food":
+            target_positioning = "猫粮高频补货人群：购买频次高但客单较低，重点建立周期补货和连续购买习惯。"
 
         # 营销方向：依据活跃度/频次/客单给出差异化方向。
         if recency <= overall_recency * 0.8 and frequency >= overall_frequency * 1.1:
@@ -219,6 +225,12 @@ class StrategyAgent:
             marketing_direction = "围绕高客单做专属权益与会员体系，提升客单与黏性。"
         else:
             marketing_direction = "用轻量券与兴趣内容培育，逐步提升转化。"
+        if category_play == "coffee":
+            marketing_direction = "以复购周期提醒承接稳定需求，再用相邻口味/规格试用推动品类升级。"
+        elif category_play == "travel":
+            marketing_direction = "围绕高客单决策做内容比较和套装承接，优先提升连带购买而非频繁打折。"
+        elif category_play == "pet_food":
+            marketing_direction = "以消耗周期预测和提前补货降低断购，用周期购/订阅提升连续复购。"
 
         ad_theme = f"为{dominant_cn if dominant else '你的兴趣'}而来" if dominant else "为你精选"
         if category_play == "coffee":
