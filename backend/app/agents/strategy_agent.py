@@ -453,6 +453,68 @@ class StrategyAgent:
             "knowledge": knowledge_basis,
         }
 
+        page = {
+            "theme": f"{segment['name']}定向承接页",
+            "visual_keywords": visual_keywords,
+            "modules": ["人群权益", "品类推荐", "验证指标"],
+            "hero_title": ad_theme,
+            "hero_subtitle": opportunity,
+            "emotional_direction": brand_tone or "清晰、可信、有行动感",
+        }
+        category_label = {
+            "coffee": "咖啡豆",
+            "travel": "旅行箱/旅行装备",
+            "pet_food": "猫粮",
+        }.get(category_play, dominant_cn if dominant else "该品类")
+
+        # 业务问题是策略主线，不只是补充关键词。不同任务类型必须切换
+        # 完整的执行方案，避免同一数据集的所有追问只得到换名后的通用卡片。
+        if question_focus["push"]:
+            push_category_plan = {
+                "coffee": "围绕咖啡豆复购周期，在预计补货前 3 天提醒；优先推荐相邻口味尝鲜或常规装升级，按钮统一指向复购/换口味页。",
+                "travel": "围绕旅行箱低频高客单决策，在用户浏览或购买相关品类后的 7 天内做一次装备补充提醒；优先推荐收纳、保护配件和套装，按钮指向旅行装备清单页。",
+                "pet_food": "围绕猫粮消耗周期，在预计用尽前 5-7 天提醒；优先推荐周期装/订阅续购，按钮指向快速补货页，避免用泛化活动打扰高频用户。",
+                "general": "围绕该人群最近购买品类和预计复购窗口触达，单次只推荐一个明确动作，避免泛化推送。",
+            }[category_play]
+            push_copy = (
+                "文案示例：出发前，把旅行装备一次备齐｜查看装备清单"
+                if category_play == "travel"
+                else "文案结构：品类/场景提醒 + 具体利益 + 单一按钮"
+            )
+            opportunity = f"{category_label}人群 Push 触达机会：用消费节奏匹配发送时机，而不是统一群发。"
+            marketing_goal = "提升 Push 打开与点击，并把点击转化为明确的复购、补货或套装购买动作。"
+            content_strategy = f"{push_category_plan} {push_copy}"
+            promotion_strategy = "首次触达在历史活跃时段前 1 小时发送；未打开者 24 小时后最多补发 1 次；7 天内同类消息不超过 2 次，并提供退订/免打扰控制。"
+            channels = ["APP Push", "站内信（未打开补发）"]
+            metrics = ["送达率", "打开率", "点击率", "目标动作转化率", "退订率"]
+            page = {
+                **page,
+                "theme": f"{category_label} Push 承接页",
+                "modules": ["Push利益点", "品类/组合推荐", "单一CTA", "频控与退订"],
+                "hero_title": ad_theme,
+                "hero_subtitle": opportunity,
+            }
+        elif question_focus["page"] or question_focus["campaign"]:
+            opportunity = f"{category_label}人群专题页承接机会：把人群差异转成页面内容、商品组合和行动路径。"
+            marketing_goal = "提升专题页到达后的权益领取、商品加购和活动转化，避免只追求曝光。"
+            content_strategy = (
+                f"首屏展示{category_label}核心利益点；中段按人群特征展示商品/组合和使用理由；"
+                "底部只保留领取权益或加入购物车一个主CTA，并为不同人群使用不同素材。"
+            )
+            promotion_strategy = (
+                f"为{category_label}设置专属权益；高客单人群用套装/配件加购，"
+                "高频人群用周期权益，常规人群用低门槛尝鲜；上线后按到达、领取、加购、成交漏斗优化。"
+            )
+            channels = ["人群专题页", "APP Push 引流", "站内信召回"]
+            metrics = ["专题页到达率", "权益领取率", "商品加购率", "活动转化率", "客单/连带提升"]
+            page = {
+                **page,
+                "theme": f"{category_label}人群专题页",
+                "modules": ["人群利益点", "专属商品组合", "权益说明", "行动CTA", "验证指标"],
+                "hero_title": ad_theme,
+                "hero_subtitle": opportunity,
+            }
+
         return {
             "segment_id": segment["segment_id"],
             "segment_name": segment["name"],
@@ -474,14 +536,7 @@ class StrategyAgent:
             "strategy_basis": strategy_basis,
             "product_mechanisms": mechanisms[:3],
             "benefits": benefits[:2],
-            "page": {
-                "theme": f"{segment['name']}定向承接页",
-                "visual_keywords": visual_keywords,
-                "modules": ["人群权益", "品类推荐", "验证指标"],
-                "hero_title": ad_theme,
-                "hero_subtitle": opportunity,
-                "emotional_direction": brand_tone or "清晰、可信、有行动感",
-            },
+            "page": page,
             "slogans": ["看清用户再承接"],
             "validation_metrics": ["权益领取率", "加购转化率"],
             "evidence_summary": evidence,
@@ -705,8 +760,17 @@ class StrategyAgent:
         ]
         model_mode = state.get("model_mode", "deterministic")
 
-        open_task = any(token in str(state.get("question", "")) for token in ("打开页", "落地页", "页面设计", "视觉风格", "首页"))
-        if (settings.llm_enhance_strategy or (settings.llm_fallback_open_tasks and open_task)) and self.llm.enabled and cards:
+        question_text = str(state.get("question", ""))
+        open_task = any(token in question_text for token in ("打开页", "落地页", "页面设计", "视觉风格", "首页"))
+        # Push、专题页、营销活动、时点/文案等问题需要严格执行上面的
+        # 任务型策略分流。不要让通用 LLM 改写成同一套模板，否则不同
+        # 业务问题最终只剩下人群名称不同。
+        deterministic_task = any(token in question_text.lower() for token in (
+            "push", "推送", "专题页", "落地页", "页面", "营销活动", "活动",
+            "发送时点", "频控", "文案", "话术", "承接",
+        ))
+        if (not deterministic_task and (settings.llm_enhance_strategy or (settings.llm_fallback_open_tasks and open_task))
+                and self.llm.enabled and cards):
             try:
                 cards = self._enhance_with_llm(
                     state=state,
