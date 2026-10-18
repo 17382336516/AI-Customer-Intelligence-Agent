@@ -75,6 +75,22 @@ class LLMClient:
                 response.raise_for_status()
             content = response.json()["choices"][0]["message"]["content"]
             return json.loads(content)
+        except httpx.HTTPStatusError as exc:
+            status_code = exc.response.status_code
+            if status_code in {401, 403}:
+                # Authentication/permission failures are not transient. Stop
+                # retrying for the lifetime of this worker and let the agents
+                # use their deterministic fallback instead.
+                self.enabled = False
+                logger.warning(
+                    "LLM disabled after HTTP %s from %s; using deterministic fallback.",
+                    status_code,
+                    settings.llm_base_url,
+                )
+            raise RuntimeError(
+                f"LLM provider rejected the request (HTTP {status_code}); "
+                "check LLM_API_KEY, LLM_BASE_URL and LLM_MODEL."
+            ) from exc
         except (
             httpx.HTTPError,
             KeyError,
