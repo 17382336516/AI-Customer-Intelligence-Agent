@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from typing import Any
 
 from ..config import settings
@@ -12,6 +13,8 @@ from ..services.strategy_requirement_planner import plan_strategy_requirements
 from ..services.knowledge_evidence_extractor import extract_knowledge_evidence
 from ..services.strategy_knowledge_planner import build_strategy_knowledge_plan
 from ..services.strategy_verifier import verify_strategy_grounding
+
+logger = logging.getLogger(__name__)
 
 
 REQUIRED_FIELDS = {
@@ -606,17 +609,20 @@ class StrategyAgent:
 
         open_task = any(token in str(state.get("question", "")) for token in ("打开页", "落地页", "页面设计", "视觉风格", "首页"))
         if (settings.llm_enhance_strategy or (settings.llm_fallback_open_tasks and open_task)) and self.llm.enabled and cards:
-            cards = self._enhance_with_llm(
-                state=state,
-                cards=cards,
-                memory_cases_count=len(memory_cases),
-                knowledge_context=knowledge_context,
-                historical_cases=historical_cases_text,
-                enterprise_context=enterprise_context,
-                knowledge_plan=knowledge_plan,
-                strategy_requirement=strategy_requirement,
-            )
-            model_mode = "llm_enhanced"
+            try:
+                cards = self._enhance_with_llm(
+                    state=state,
+                    cards=cards,
+                    memory_cases_count=len(memory_cases),
+                    knowledge_context=knowledge_context,
+                    historical_cases=historical_cases_text,
+                    enterprise_context=enterprise_context,
+                    knowledge_plan=knowledge_plan,
+                    strategy_requirement=strategy_requirement,
+                )
+                model_mode = "llm_enhanced"
+            except Exception as exc:
+                logger.warning("Strategy LLM enhancement failed; using deterministic fallback: %s", exc)
 
         # Attribution is deterministic: a source is recorded only when it was
         # actually retrieved and one of its mapped concepts appears in a

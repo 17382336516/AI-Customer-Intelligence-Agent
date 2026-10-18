@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from typing import Any
 
 from ..config import settings
@@ -8,6 +9,8 @@ from ..database import Repository
 from ..services.data_tools import category_display
 from ..services.lifecycle_classifier import classify_segment_lifecycle
 from ..services.llm import LLMClient
+
+logger = logging.getLogger(__name__)
 
 
 class InsightAgent:
@@ -352,12 +355,15 @@ class InsightAgent:
         model_mode = "deterministic"
 
         if settings.llm_enhance_insights and self.llm.enabled and target_segments:
-            insights = self._enhance_with_llm(
-                state=state,
-                target_segments=target_segments,
-                base_insights=insights,
-            )
-            model_mode = "llm_enhanced"
+            try:
+                insights = self._enhance_with_llm(
+                    state=state,
+                    target_segments=target_segments,
+                    base_insights=insights,
+                )
+                model_mode = "llm_enhanced"
+            except Exception as exc:
+                logger.warning("Insight LLM enhancement failed; using deterministic fallback: %s", exc)
 
         self.repository.add_event(
             state["analysis_id"],
