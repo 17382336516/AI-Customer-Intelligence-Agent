@@ -120,6 +120,14 @@ class StrategyAgent:
             "scenario_enhanced_churn_user": "场景增强沉默用户",
         }
         lifecycle_text = "、".join(lifecycle_description.get(tag, tag) for tag in lifecycle_tags)
+        question_focus = {
+            "push": any(token in question.lower() for token in ("push", "推送", "触达", "短信", "站内信")),
+            "page": any(token in question for token in ("专题页", "落地页", "页面", "首页", "视觉")),
+            "campaign": any(token in question for token in ("营销活动", "活动方案", "活动策略", "campaign")),
+            "timing": any(token in question for token in ("时点", "时间", "时机", "节点", "什么时候")),
+            "copy": any(token in question for token in ("文案", "标题", "slogan", "话术")),
+            "differentiation": any(token in question for token in ("差异化", "分别", "不同人群")),
+        }
         question_terms: list[str] = []
         if any(token in question for token in ("年轻", "增长", "转化")):
             question_terms.extend(["年轻用户", "低门槛", "持续参与"])
@@ -127,6 +135,10 @@ class StrategyAgent:
             question_terms.extend(["新品", "兴趣匹配", "低门槛"])
         if any(token in question for token in ("召回", "沉默", "流失")):
             question_terms.extend(["召回", "分层触达", "频控"])
+        if question_focus["push"]:
+            question_terms.extend(["分层Push", "发送时点", "频控与退订"])
+        if question_focus["page"] or question_focus["campaign"]:
+            question_terms.extend(["首屏承接", "品类推荐模块", "转化路径"])
 
         evidence = [
             f"{item.get('metric')}: {item.get('value')} ({item.get('benchmark', '')})"
@@ -248,6 +260,10 @@ class StrategyAgent:
             goals.append("培育兴趣并提升转化")
         if spend_ratio >= 1.1:
             goals.append("提升客单价与高价值商品渗透")
+        if question_focus["push"]:
+            goals.insert(0, "提升分层 Push 的打开、点击与回流转化")
+        elif question_focus["page"] or question_focus["campaign"]:
+            goals.insert(0, "提升专题页承接效率与活动转化")
         marketing_goal = "；".join(goals[:3])
 
         # 2) 内容策略：场景化内容方向（不只有商品陈列），依据品类与行为。
@@ -264,12 +280,21 @@ class StrategyAgent:
             content_parts.append(f"围绕{lifecycle_text}设计分层内容与可执行触达")
         if question_terms:
             content_parts.append("、".join(dict.fromkeys(question_terms)))
+        if question_focus["push"]:
+            if "旅行" in question or "luggage" in question.lower() or "行李" in question:
+                content_parts.append("旅行·luggage人群采用出行准备场景：出发前补购清单、轻量收纳技巧与目的地适配建议，Push 只承接一个明确动作")
+            else:
+                content_parts.append("Push 内容按人群阶段拆分：高频用户强调补购/升级，沉默用户强调低门槛回流，正文只保留一个明确行动按钮")
+        if question_focus["page"] or question_focus["campaign"]:
+            content_parts.append("专题页按首屏利益点→人群专属商品→权益说明→行动按钮组织，页面内容与人群主品类保持一一对应")
+        if question_focus["differentiation"]:
+            content_parts.append(f"针对{lifecycle_text or '该人群'}单独设置利益点、商品组合和验证指标，不复用其他人群的通用话术")
         if required_concepts:
             content_parts.append("策略要求覆盖：" + "、".join(required_concepts))
         for item in knowledge_plan:
             if item.get("strategy_field") in {"content_strategy", "channel"} and item.get("expected_concept"):
                 content_parts.append(f"依据企业知识：{item['expected_concept']}")
-        content_strategy = "。".join(content_parts[:5]) + ("。" if content_parts else "")
+        content_strategy = "。".join(content_parts[:7]) + ("。" if content_parts else "")
 
         # 3) 商品策略：组合与推荐方向（引用真实品类/品牌/直接兴趣，禁止只写券）。
         product_parts: list[str] = []
@@ -301,9 +326,21 @@ class StrategyAgent:
                 promo_parts.append(f"依据企业知识：{item['expected_concept']}")
         if question_terms:
             promo_parts.append("、".join(dict.fromkeys(question_terms)))
+        if question_focus["push"]:
+            if question_focus["timing"]:
+                promo_parts.append("建议在用户历史活跃时段前 1 小时发送首触达；未打开者 24 小时后仅补发 1 次，7 天内同类消息不超过 2 次")
+            else:
+                promo_parts.append("采用分层 Push：高频人群推复购/升级，低频人群推低门槛权益；每次只绑定一个落地页动作并设置频控")
+            if question_focus["copy"]:
+                if "旅行" in question or "luggage" in question.lower() or "行李" in question:
+                    promo_parts.append("旅行人群文案示例：‘出发前，把常用装备一次备齐’；按钮：‘查看旅行装备清单’；避免泛化为旅游兴趣推断")
+                else:
+                    promo_parts.append("文案结构使用‘人群场景 + 品类利益 + 单一行动’：例如‘你的咖啡豆快补货了｜查看本周复购权益’")
+        if question_focus["page"] or question_focus["campaign"]:
+            promo_parts.append("专题页/活动采用人群专属入口，首屏展示主品类权益，中段展示组合商品，底部以领取权益或加入购物车作为唯一主 CTA")
         if required_concepts:
             promo_parts.append("；".join(required_concepts))
-        promotion_strategy = "；".join(promo_parts[:5])
+        promotion_strategy = "；".join(promo_parts[:7])
 
         # 5) 效果指标：覆盖点击/加购/转化/客单/连带。
         metrics = [
@@ -313,6 +350,10 @@ class StrategyAgent:
             "客单价提升",
             "连带购买率",
         ]
+        if question_focus["push"]:
+            metrics.extend(["Push送达率", "Push打开率", "Push点击率", "退订率"])
+        if question_focus["page"] or question_focus["campaign"]:
+            metrics.extend(["专题页到达率", "权益领取率", "页面 CTA 点击率"])
 
         # 策略依据：必须可追溯，禁止生成无依据的营销建议。
         data_basis: list[str] = []
