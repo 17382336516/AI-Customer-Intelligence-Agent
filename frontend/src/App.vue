@@ -648,11 +648,22 @@ function featureLabel(feature: string): string {
 
 // 应用启动时自动恢复：加载会话列表，并回到上次选中的数据集会话（数据已在数据库持久化）
 onMounted(async () => {
-  try {
-    await refreshSessions()
-  } catch {
-    sessions.value = []
+  let lastError: unknown
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      await refreshSessions()
+      return
+    } catch (error) {
+      lastError = error
+      if (attempt < 2) {
+        await new Promise((resolve) => window.setTimeout(resolve, 1500 * (attempt + 1)))
+      }
+    }
   }
+  // Render may need a few seconds to wake from an idle state. Do not silently
+  // turn a temporary request failure into an empty history list.
+  sessions.value = []
+  ElMessage.warning((lastError as Error)?.message || '历史数据暂时无法加载，请稍后刷新重试。')
 })
 
 </script>
