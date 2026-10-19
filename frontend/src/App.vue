@@ -49,6 +49,7 @@ const sessionDetail = ref<SessionDetail | null>(null)
 const selectedCard = ref(0)
 const activeResultTab = ref<'overview' | 'evidence' | 'page'>('overview')
 const busy = ref(false)
+const openingDatasetId = ref<string | null>(null)
 const dragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
 // 新建会话时的会话名称（自定义优先，否则按数据集名自动生成）
@@ -278,29 +279,43 @@ async function confirmRename() {
 }
 
 async function openSession(record: Session) {
-  selectedSession.value = record
-  activeView.value = 'list'
-  localStorage.setItem(STORAGE_VIEW, 'list')
-  localStorage.setItem(STORAGE_SELECTED, record.id)
-  // 数据集级聚合详情：加载该数据集下所有业务记录（每条独立含洞察/策略/轨迹）
-  sessionDetail.value = await getDatasetDetail(record.id)
-  // 收集该数据集下的所有分析项目（session）id，供「生成业务策略」复用
-  datasetSessionIds.value = [
-    ...new Set(sessionDetail.value.conversations.map((item) => item.session_id)),
-  ]
-  // 恢复上次展开的业务记录（若该记录仍属于此数据集）
-  const savedExpanded = localStorage.getItem(STORAGE_EXPANDED)
-  expandedRecordId.value = savedExpanded && sessionDetail.value.conversations.some((item) => item.id === savedExpanded)
-    ? savedExpanded
-    : null
-  followUpQuestion.value = ''
-  analysis.value = null
-  events.value = []
-  // 加载数据集级分析资产（沉淀的洞察/分群/消费趋势），驱动顶部基础分析结果
   try {
-    datasetAsset.value = await getDatasetAsset(record.dataset_id)
-  } catch {
-    datasetAsset.value = null
+    openingDatasetId.value = record.dataset_id
+    selectedSession.value = record
+    activeView.value = 'list'
+    localStorage.setItem(STORAGE_VIEW, 'list')
+    localStorage.setItem(STORAGE_SELECTED, record.id)
+    let detail: SessionDetail | null = null
+    let lastError: unknown
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      try {
+        detail = await getDatasetDetail(record.dataset_id)
+        break
+      } catch (error) {
+        lastError = error
+        if (attempt < 2) await new Promise((resolve) => window.setTimeout(resolve, 1500 * (attempt + 1)))
+      }
+    }
+    if (!detail) throw lastError ?? new Error('数据集详情暂时无法加载')
+    sessionDetail.value = detail
+    datasetSessionIds.value = [...new Set(detail.conversations.map((item) => item.session_id))]
+    const savedExpanded = localStorage.getItem(STORAGE_EXPANDED)
+    expandedRecordId.value = savedExpanded && detail.conversations.some((item) => item.id === savedExpanded)
+      ? savedExpanded
+      : null
+    followUpQuestion.value = ''
+    analysis.value = null
+    events.value = []
+    try {
+      datasetAsset.value = await getDatasetAsset(record.dataset_id)
+    } catch {
+      datasetAsset.value = null
+    }
+  } catch (error) {
+    sessionDetail.value = null
+    ElMessage.error((error as Error).message || '数据集详情加载失败，请稍后重试')
+  } finally {
+    openingDatasetId.value = null
   }
 }
 
@@ -725,7 +740,8 @@ onMounted(async () => {
         <button
           v-for="record in sessions"
           :key="record.id"
-          :class="['session-item', { active: selectedSession?.id === record.id }]"
+          :class="['session-item', { active: selectedSession?.id === record.id, loading: openingDatasetId === record.dataset_id }]"
+          :disabled="busy || openingDatasetId !== null"
           @click="openSession(record)"
         >
           <Document class="session-icon" />
@@ -735,7 +751,7 @@ onMounted(async () => {
             <small>更新于 {{ formatTime(record.updated_at) }}</small>
           </div>
           <div class="session-item-actions">
-            <button class="session-rename" title="重命名" @click="openRenameDialog(record)">✎</button>
+            <button class="session-rename" title="重命名" @click.stop="openRenameDialog(record)">✎</button>
             <button class="session-delete" title="删除" @click="removeSession(record, $event)">×</button>
           </div>
         </button>
