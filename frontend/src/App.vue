@@ -68,6 +68,7 @@ const datasetSessionIds = ref<string[]>([])
 // 刷新后恢复视图状态：记住最后选中的会话与展开的业务记录
 const STORAGE_SELECTED = 'cia:selected_session'
 const STORAGE_EXPANDED = 'cia:expanded_record'
+const STORAGE_VIEW = 'cia:active_view'
 
 const form = ref({
   question: '哪些用户人群最适合承接下一期专题页或营销活动？请给出差异化策略。',
@@ -211,6 +212,8 @@ function resetResults() {
 async function refreshSessions() {
   // 左侧按数据集维度加载：一数据集一张卡片，聚合其全部业务记录。
   const datasets = await listDatasets(100)
+  const restoreCompose = localStorage.getItem(STORAGE_VIEW) === 'compose'
+  const savedId = localStorage.getItem(STORAGE_SELECTED)
   sessions.value = datasets.map((ds) => ({
     id: ds.id,
     dataset_id: ds.id,
@@ -230,9 +233,23 @@ async function refreshSessions() {
   }
   if (!selectedSession.value && sessions.value.length) {
     // 刷新后：优先恢复上次选中的数据集，否则打开最近更新的数据集
-    const savedId = localStorage.getItem(STORAGE_SELECTED)
     const target = sessions.value.find((item) => item.id === savedId) ?? sessions.value[0]
     await openSession(target)
+  }
+  // 如果用户刷新前正在「新建分析会话」，恢复同一个数据集和预览，
+  // 不再让上传控件退回空白状态。数据文件本身由后端持久化保存。
+  if (restoreCompose) {
+    const targetId = selectedSession.value?.dataset_id || savedId
+    const restored = datasets.find((item) => item.id === targetId) ?? datasets[0]
+    if (restored) {
+      dataset.value = restored
+      try {
+        datasetAsset.value = await getDatasetAsset(restored.id)
+      } catch {
+        datasetAsset.value = null
+      }
+      activeView.value = 'compose'
+    }
   }
 }
 
@@ -262,6 +279,8 @@ async function confirmRename() {
 
 async function openSession(record: Session) {
   selectedSession.value = record
+  activeView.value = 'list'
+  localStorage.setItem(STORAGE_VIEW, 'list')
   localStorage.setItem(STORAGE_SELECTED, record.id)
   // 数据集级聚合详情：加载该数据集下所有业务记录（每条独立含洞察/策略/轨迹）
   sessionDetail.value = await getDatasetDetail(record.id)
@@ -310,9 +329,18 @@ async function removeSession(record: Session, event: MouseEvent) {
 
 function startCompose() {
   activeView.value = 'compose'
-  dataset.value = null
+  localStorage.setItem(STORAGE_VIEW, 'compose')
   resetResults()
   sessionName.value = ''
+  // 保留当前选中的数据集；如果当前内存状态为空，则从后端重新取回。
+  if (!dataset.value && selectedSession.value) {
+    void listDatasets(100).then((items) => {
+      const restored = items.find((item) => item.id === selectedSession.value?.dataset_id)
+      if (restored) dataset.value = restored
+    }).catch(() => {
+      ElMessage.warning('数据集正在从云端恢复，请稍后重试')
+    })
+  }
 }
 
 async function submitFollowUp() {
@@ -495,6 +523,8 @@ async function handleFile(file: File) {
   resetResults()
   try {
     dataset.value = await uploadDataset(file)
+    localStorage.setItem(STORAGE_SELECTED, dataset.value.id)
+    localStorage.setItem(STORAGE_VIEW, 'compose')
     resetResults()
     // 需求四：若数据集已存在且已有沉淀资产，直接进入历史 Dataset Detail，不重新生成洞察
     try {
@@ -536,6 +566,8 @@ async function useDemo() {
   resetResults()
   try {
     dataset.value = await createDemoDataset()
+    localStorage.setItem(STORAGE_SELECTED, dataset.value.id)
+    localStorage.setItem(STORAGE_VIEW, 'compose')
     resetResults()
     ElMessage.success('示例数据已载入')
   } catch (error) {
@@ -572,6 +604,7 @@ async function runAnalysis() {
     ElMessage.success('分析已完成，已为你创建分析会话')
     // 生成后回到会话列表并打开新建的会话
     activeView.value = 'list'
+    localStorage.setItem(STORAGE_VIEW, 'list')
     await refreshSessions()
     const created = sessions.value.find((item) => item.name === name) ?? sessions.value[0]
     if (created) await openSession(created)
@@ -648,6 +681,8 @@ function featureLabel(feature: string): string {
 
 // 应用启动时自动恢复：加载会话列表，并回到上次选中的数据集会话（数据已在数据库持久化）
 onMounted(async () => {
+  const savedView = localStorage.getItem(STORAGE_VIEW)
+  activeView.value = savedView === 'compose' ? 'compose' : 'list'
   let lastError: unknown
   for (let attempt = 0; attempt < 3; attempt += 1) {
     try {
